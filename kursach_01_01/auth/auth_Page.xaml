@@ -37,7 +37,7 @@
                <Span  Foreground="White">Введите пароль:</Span>
             </TextBlock>
             <PasswordBox x:Name="txt_password"/>
-            <Button x:Name="btn_login" Content="Войти в личный кабинет"  IsDefault="True"  >
+            <Button x:Name="btn_login" Click="btn_login_Click" Content="Войти в личный кабинет"  IsDefault="True"  >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>

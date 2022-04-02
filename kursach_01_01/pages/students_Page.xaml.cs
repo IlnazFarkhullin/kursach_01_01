@@ -12,23 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using kursach_01_01.pages;
 
-namespace kursach_01_01.auth
+namespace kursach_01_01.pages
 {
     /// <summary>
-    /// Логика взаимодействия для auth_Page.xaml
+    /// Логика взаимодействия для students_Page.xaml
     /// </summary>
-    public partial class auth_Page : Page
+    public partial class students_Page : Page
     {
-        public auth_Page()
+        public students_Page()
         {
             InitializeComponent();
+            studentgrid.ItemsSource = DataBaseMethods. ShowStudent(Name);
         }
 
-        private void btn_login_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new my_page ());
-        }
+       
     }
 }

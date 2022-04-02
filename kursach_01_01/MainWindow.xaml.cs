@@ -26,18 +26,10 @@ namespace kursach_01_01
         public MainWindow()
         {
             InitializeComponent();
-            //autorization.Navigate(new auth_Page());
-            studentgrid.ItemsSource = ShowStudent(null);
+            auth.Navigate(new auth_Page());
+
         }
 
-        public static List<student> ShowStudent(string std)
-        {
-            var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("test");
-            //var collection = database.GetCollection<students>(std);
-
-            IMongoCollection<student> collection = database.GetCollection<student>(std);
-            return collection.Find(x => true).ToList();
-        }
+        
     }
 }
