@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using kursach_01_01.auth;//подключение к папке
+using System.Windows.Threading;
 
 namespace kursach_01_01
 {
@@ -23,13 +24,63 @@ namespace kursach_01_01
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer timer;
+        double panelWidth;
+        bool hidden;
         public MainWindow()
         {
             InitializeComponent();
-            auth.Navigate(new auth_Page());
+            //auth.Navigate(new auth_Page());
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0,0,0,0,10);
+            timer.Tick += Timer_Tick;
+            panelWidth = sidePanel.Width;
 
         }
 
-        
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (hidden)
+            {
+                sidePanel.Width += 1;
+                if (sidePanel.Width>=panelWidth)
+                {
+                    timer.Stop();
+                    hidden = false;
+                }
+            }
+            else
+            {
+                sidePanel.Width -= 1;
+                if (sidePanel.Width <= 0)
+                {
+                    timer.Stop();
+                    hidden = true;
+                }
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Start();
+        }
+
+        private void panelHeader_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+           
+        }
+
+        private void Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void panelHeader_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
     }
 }
