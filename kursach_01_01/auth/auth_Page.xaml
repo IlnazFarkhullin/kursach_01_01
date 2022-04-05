@@ -8,13 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="auth_Page">
 
-    <Grid x:Name="autorization">
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="#FF5E7C86" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
+    <Grid x:Name="autorization" Background="#FF0F4E7A">
+        
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

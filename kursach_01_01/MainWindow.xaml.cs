@@ -52,7 +52,7 @@ namespace kursach_01_01
             else
             {
                 sidePanel.Width -= 1;
-                if (sidePanel.Width <= 0)
+                if (sidePanel.Width <= 35)
                 {
                     timer.Stop();
                     hidden = true;

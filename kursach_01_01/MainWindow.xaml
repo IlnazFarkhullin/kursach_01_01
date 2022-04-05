@@ -20,17 +20,23 @@
         </Grid>
         <Grid x:Name="sidePanel" Background="#FF0F4E7A" HorizontalAlignment="Left" Width="150">
             <StackPanel>
-                <Grid Height="120" Background="White">
+                <Grid Height="20" Background="White">
                     <Button  Click="Button_Click"  HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent">
                         <Image Source="icons/stripes.png"/>
                     </Button>
                 </Grid>
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="14" Foreground="White" BorderBrush="Transparent" Background="Transparent">
-                    <ListViewItem Height="30">
+                    <ListViewItem Height="30" >
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="icons/students.png" Height="20"/>
-                            <TextBlock Margin="10,0, 0, 0" Text="Students" VerticalAlignment="Center" />
+                            <Image Source="icons/my_page.png" Height="20"/>
+                            <TextBlock Margin="10,0, 0, 0" Text="My page" VerticalAlignment="Center" />
                         </StackPanel> 
+                    </ListViewItem>
+                    <ListViewItem Height="30" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="icons/students .png" Height="20"/>
+                            <TextBlock Margin="10,0, 0, 0" Text="Students" VerticalAlignment="Center" />
+                        </StackPanel>
                     </ListViewItem>
                 </ListView>
             </StackPanel>
