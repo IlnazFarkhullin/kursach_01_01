@@ -28,7 +28,7 @@ namespace kursach_01_01.auth
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new my_page ());
+            NavigationService.Navigate(new main_page());
         }
     }
 }

@@ -148,8 +148,8 @@
     </ApplicationDefinition>
     <Compile Include="DataBaseMethods.cs" />
     <Compile Include="mongo_class\autharethation.cs" />
-    <Compile Include="pages\my_page.xaml.cs">
-      <DependentUpon>my_page.xaml</DependentUpon>
+    <Compile Include="pages\main_page.xaml.cs">
+      <DependentUpon>main_page.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\students_Page.xaml.cs">
       <DependentUpon>students_Page.xaml</DependentUpon>
@@ -174,7 +174,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="pages\my_page.xaml">
+    <Page Include="pages\main_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -220,9 +220,9 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
-    <Resource Include="icons\stripes.png" />
     <Resource Include="icons\students .png" />
     <Resource Include="icons\my_page.png" />
+    <Resource Include="icons\menu.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
