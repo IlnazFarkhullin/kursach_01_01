@@ -16,18 +16,15 @@ using System.Windows.Shapes;
 namespace kursach_01_01.pages
 {
     /// <summary>
-    /// Логика взаимодействия для students_page.xaml
+    /// Логика взаимодействия для my_page.xaml
     /// </summary>
-    public partial class students_page : Page
+    public partial class my_page : Page
     {
-        public students_page()
+        public my_page()
         {
             InitializeComponent();
         }
 
-        private void ListDataPeople_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        
     }
 }

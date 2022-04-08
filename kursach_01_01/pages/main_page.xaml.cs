@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using kursach_01_01.pages;
 
 
 namespace kursach_01_01.pages
@@ -82,7 +83,22 @@ namespace kursach_01_01.pages
 
         private void DragMove()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+        }
+
+        private void my_page_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            pages.Navigate(new my_page());
+        }
+
+        private void students_view_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            pages.Navigate(new students_page());
+        }
+
+        private void notes_view_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

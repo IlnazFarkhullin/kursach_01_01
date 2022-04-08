@@ -9,31 +9,39 @@
       Title="main_page">
 
     <Grid>
-        <Grid   x:Name="panelHeader" VerticalAlignment="Top" Height="50" Background="#FF0F4E7A" MouseDown="panelHeader_MouseDown_1">
+        <!--<Grid   x:Name="panelHeader" VerticalAlignment="Top" Height="50" Background="#FF0F4E7A" MouseDown="panelHeader_MouseDown_1">
             <TextBlock Text="Студенты" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-        </Grid>
+        </Grid>-->
         <Grid x:Name="sidePanel" Background="#FF0F4E7A" HorizontalAlignment="Left" Width="150">
             <StackPanel>
-                <Grid Height="35" Background="#FF0F4E7A">
+                <Grid Height="35" Background="#FF0F4E7A" Margin="0,40,0,0"> 
                     <Button  Click="Button_Click"  HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent">
-                        <Image Source="icons/menu.png"/>
+                        <Image Source="/ico/imenu.png"/>
+                        
                     </Button>
                 </Grid>
-                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="14" Foreground="White" BorderBrush="Transparent" Background="Transparent">
-                    <ListViewItem Height="30"  >
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="14" Foreground="White" BorderBrush="Transparent" Background="Transparent" >
+                    <ListViewItem  Height="30" x:Name="my_page" MouseDoubleClick="my_page_MouseDoubleClick" >
                         <StackPanel Orientation="Horizontal" >
-                            <!--<Image Source="icons/my_page.png" Height="29"/>-->
-                            <TextBlock Margin="10,0, 0, 0" Text="My page" VerticalAlignment="Center" FontFamily="Lucida Handwriting" FontSize="16" />
+                            <Image Source="/ico/imy_page.png" Height="29"/>
+                            <TextBlock Margin="10,0, 0, 0" Text="Моя страница" VerticalAlignment="Center" FontFamily="Lucida Handwriting" FontSize="16" />
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="30" >
+                    <ListViewItem  Height="30" x:Name="students_view" MouseDoubleClick="students_view_MouseDoubleClick">
                         <StackPanel Orientation="Horizontal">
-                            <!--<Image Source="icons/students .png" Height="29"/>-->
-                            <TextBlock Margin="10,0, 0, 0" Text="Students" VerticalAlignment="Center" FontFamily="Lucida Handwriting" FontSize="18" />
+                            <Image x:Name="icon_student" Source="/ico/istudens.png" Height="29"/>
+                            <TextBlock Margin="10,0, 0, 0" Text="Студенты" VerticalAlignment="Center" FontFamily="Lucida Handwriting" FontSize="18" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem  Height="30" x:Name="notes_view" MouseDoubleClick="notes_view_MouseDoubleClick">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="notes" Source="/ico/pencil.png" Height="29"/>
+                            <TextBlock Margin="10,0, 0, 0" Text="Заметки" VerticalAlignment="Center" FontFamily="Lucida Handwriting" FontSize="18" />
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
             </StackPanel>
         </Grid>
+        <Frame x:Name="pages" Content=""></Frame>
     </Grid>
 </Page>
