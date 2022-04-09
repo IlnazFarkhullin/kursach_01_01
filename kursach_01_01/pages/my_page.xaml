@@ -9,12 +9,12 @@
       Title="my_page">
 
     <Grid>
-        <Grid.RowDefinitions>
+        <!--<Grid.RowDefinitions>
             <RowDefinition Height="50.873"/>
             <RowDefinition Height="50.873"/>
 
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0"  x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" >
+        </Grid.RowDefinitions>-->
+        <Grid   x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" >
             <TextBlock Text="Моя страница" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
         </Grid>
         

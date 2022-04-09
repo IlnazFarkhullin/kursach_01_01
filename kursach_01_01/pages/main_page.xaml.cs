@@ -23,10 +23,11 @@ namespace kursach_01_01.pages
     /// </summary>
     public partial class main_page : Page
     {
-
         DispatcherTimer timer;
         double panelWidth;
         bool hidden;
+
+
         public main_page()
         {
             InitializeComponent();
@@ -34,8 +35,9 @@ namespace kursach_01_01.pages
             timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
             timer.Tick += Timer_Tick;
             panelWidth = sidePanel.Width;
-        }
 
+
+        }
         private void Timer_Tick(object sender, EventArgs e)
         {
             if (hidden)
@@ -58,47 +60,10 @@ namespace kursach_01_01.pages
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void menu_Click(object sender, RoutedEventArgs e)
         {
             timer.Start();
-        }
-
-        private void panelHeader_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void Button_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void panelHeader_MouseDown_1(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
-        }
-
-        private void DragMove()
-        {
-            //throw new NotImplementedException();
-        }
-
-        private void my_page_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            pages.Navigate(new my_page());
-        }
-
-        private void students_view_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            pages.Navigate(new students_page());
-        }
-
-        private void notes_view_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
         }
     }
 }
