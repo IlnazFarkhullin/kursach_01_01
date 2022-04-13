@@ -1,0 +1,40 @@
+﻿<Page x:Class="kursach_01_01.pages.main_page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kursach_01_01.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="main_page">
+
+    <Grid>
+        <Grid x:Name="pahel_header" VerticalAlignment="Top" Height="50" MouseDown="pahel_header_MouseDown">
+            
+        </Grid>
+        <Grid x:Name="sidePanel" Background="#FF0F4E7A" HorizontalAlignment="Left" Width="150">
+            <StackPanel>
+                <Grid Background="#FF0F4E7A" Height="30" >
+                    <Button x:Name="menu" Click="menu_Click"   HorizontalAlignment="Right" Height="25" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent">
+                        <Image Source="/ico/imenu.png"/>
+                    </Button>
+                </Grid>
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="12" Foreground="White" BorderBrush="Transparent" Background="Transparent">
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/ico/imy_page.png" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock Margin="10,0,0,0" Text="Моя страница" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/ico/istudens.png" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock Margin="10,0,0,0" Text="Студенты" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+            
+        </Grid>
+    </Grid>
+</Page>

@@ -149,6 +149,9 @@
     <Compile Include="pages\demo.xaml.cs">
       <DependentUpon>demo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pages\main_page.xaml.cs">
+      <DependentUpon>main_page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\my_page.xaml.cs">
       <DependentUpon>my_page.xaml</DependentUpon>
     </Compile>
@@ -172,6 +175,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="pages\demo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\main_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
