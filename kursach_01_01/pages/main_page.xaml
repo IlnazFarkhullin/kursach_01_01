@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:kursach_01_01.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="main_page">
+      Title="main_page"
+      >
 
     <Grid>
         <Grid x:Name="pahel_header" VerticalAlignment="Top" Height="50" MouseDown="pahel_header_MouseDown">
@@ -19,8 +20,9 @@
                         <Image Source="/ico/imenu.png"/>
                     </Button>
                 </Grid>
-                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="12" Foreground="White" BorderBrush="Transparent" Background="Transparent">
-                    <ListViewItem Height="30">
+                 
+                <ListView  ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="12" Foreground="White" BorderBrush="Transparent" Background="Transparent">
+                    <ListViewItem MouseDoubleClick="my_page_MouseDoubleClick" x:Name="my_page" Height="30">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/ico/imy_page.png" Height="25" VerticalAlignment="Center"/>
                             <TextBlock Margin="10,0,0,0" Text="Моя страница" VerticalAlignment="Center"/>
@@ -36,5 +38,6 @@
             </StackPanel>
             
         </Grid>
+        <Frame x:Name="page"/>
     </Grid>
 </Page>

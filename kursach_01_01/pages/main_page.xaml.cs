@@ -78,5 +78,10 @@ namespace kursach_01_01.pages
         {
             throw new NotImplementedException();
         }
+
+        private void my_page_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+           page.NavigationService.Navigate(new demo());
+        }
     }
 }
