@@ -38,6 +38,6 @@
             </StackPanel>
             
         </Grid>
-        <Frame x:Name="page"/>
+        <Frame x:Name="page" IsEnabled="False"/>
     </Grid>
 </Page>
