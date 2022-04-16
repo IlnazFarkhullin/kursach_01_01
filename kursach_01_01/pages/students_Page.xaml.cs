@@ -25,9 +25,6 @@ namespace kursach_01_01.pages
             InitializeComponent();
         }
 
-        private void ListDataPeople_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+       
     }
 }

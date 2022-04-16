@@ -12,8 +12,8 @@
         <Grid   x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" >
             <TextBlock Text="Студенты" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
         </Grid>
-        <StackPanel Grid.Column="2" Grid.ColumnSpan="2">
-            <ListView x:Name="ListDataPeople" SelectionChanged="ListDataPeople_SelectionChanged" >
+        <StackPanel>
+            <ListView x:Name="ListDataPeople">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Columns="3" Rows="3"/>
@@ -22,8 +22,8 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <Image Source="{Binding Login}"/>
-                            <TextBlock Text="{Binding Name, StringFormat='{} name :{0}'}"/>
+                            <Image Source="{Binding _id}"/>
+                            <TextBlock Text="{Binding Name}"/>
 
                         </StackPanel>
                     </DataTemplate>
