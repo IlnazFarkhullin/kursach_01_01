@@ -79,9 +79,9 @@ namespace kursach_01_01.pages
             throw new NotImplementedException();
         }
 
-        private void my_page_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void my_page_Selected(object sender, RoutedEventArgs e)
         {
-           page.NavigationService.Navigate(new demo());
+            page.NavigationService.Navigate(new students_page());
         }
     }
 }

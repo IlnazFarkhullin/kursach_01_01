@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using kursach_01_01.BD_class;
 namespace kursach_01_01.pages
 {
     /// <summary>
@@ -23,6 +23,7 @@ namespace kursach_01_01.pages
         public students_page()
         {
             InitializeComponent();
+            DataBaseMethods.ShowStudents();
         }
 
        

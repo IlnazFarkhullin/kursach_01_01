@@ -8,28 +8,25 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="students_page">
     <Grid>
-        
+
         <Grid   x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" >
             <TextBlock Text="Студенты" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
         </Grid>
-        <StackPanel>
-            <ListView x:Name="ListDataPeople">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Columns="3" Rows="3"/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel>
-                            <Image Source="{Binding _id}"/>
-                            <TextBlock Text="{Binding Name}"/>
+        <Grid Margin="0,0,0,72">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <ListView  Margin="0,42,0,0" x:Name="std"  Grid.RowSpan="2">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="№" DisplayMemberBinding ="{Binding _id}"  Width="auto"/>
+                        <GridViewColumn Header="Наименование" DisplayMemberBinding ="{Binding Name}"  Width="auto"/>
 
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+
+                    </GridView>
+                </ListView.View>
             </ListView>
-        </StackPanel>
-
+          </Grid>
     </Grid>
 </Page>

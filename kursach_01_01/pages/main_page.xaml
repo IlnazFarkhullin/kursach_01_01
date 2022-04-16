@@ -22,7 +22,7 @@
                 </Grid>
                  
                 <ListView  ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="12" Foreground="White" BorderBrush="Transparent" Background="Transparent">
-                    <ListViewItem MouseDoubleClick="my_page_MouseDoubleClick" x:Name="my_page" Height="30">
+                    <ListViewItem Selected="my_page_Selected" x:Name="my_page" Height="30">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/ico/imy_page.png" Height="25" VerticalAlignment="Center"/>
                             <TextBlock Margin="10,0,0,0" Text="Моя страница" VerticalAlignment="Center"/>
@@ -38,6 +38,6 @@
             </StackPanel>
             
         </Grid>
-        <Frame x:Name="page" IsEnabled="False"/>
+        <Frame x:Name="page"/>
     </Grid>
 </Page>
