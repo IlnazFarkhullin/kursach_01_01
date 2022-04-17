@@ -81,7 +81,14 @@ namespace kursach_01_01.pages
 
         private void my_page_Selected(object sender, RoutedEventArgs e)
         {
-            page.NavigationService.Navigate(new students_page());
+            
+        }
+
+       
+
+        private void stud_page_Selected(object sender, RoutedEventArgs e)
+        {
+           page.NavigationService.Navigate(new students_page());
         }
     }
 }

@@ -28,7 +28,7 @@
                             <TextBlock Margin="10,0,0,0" Text="Моя страница" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="30">
+                    <ListViewItem x:Name="stud_page" Height="30" Selected="stud_page_Selected">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/ico/istudens.png" Height="25" VerticalAlignment="Center"/>
                             <TextBlock Margin="10,0,0,0" Text="Студенты" VerticalAlignment="Center"/>

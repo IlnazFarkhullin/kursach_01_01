@@ -10,12 +10,13 @@ namespace kursach_01_01.BD_class
 {
     class DataBaseMethods
     {
-        public static List<students_class> ShowStudents()
+        public static  List<students_class> ShowStudents()
         {
             var stud = new MongoClient("mongodb://localhost");
             var database = stud.GetDatabase("test");
-            var collection = database.GetCollection<students_class>("student");
-            return collection.Find(x => true).ToList();
+            var collection = database.GetCollection<BD_class.students_class>("student");
+            //return collection.Find(x => true).ToList();
+
         }
     }
 }
