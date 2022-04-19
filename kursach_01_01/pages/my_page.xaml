@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="my_page">
 
-    <Grid>
+    <Grid Background="White">
         <!--<Grid.RowDefinitions>
             <RowDefinition Height="50.873"/>
             <RowDefinition Height="50.873"/>
@@ -17,6 +17,8 @@
         <Grid   x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" >
             <TextBlock Text="Моя страница" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
         </Grid>
-        
+        <Grid>
+             
+        </Grid>
     </Grid>
 </Page>

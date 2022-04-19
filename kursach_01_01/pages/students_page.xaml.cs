@@ -23,7 +23,7 @@ namespace kursach_01_01.pages
         public students_page()
         {
             InitializeComponent();
-            DataBaseMethods.ShowStudents();
+            std.ItemsSource= DataBaseMethods.ShowStudents();
         }
 
        
