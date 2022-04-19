@@ -15,7 +15,7 @@ namespace kursach_01_01.BD_class
             var stud = new MongoClient("mongodb://localhost");
             var database = stud.GetDatabase("test");
             var collection = database.GetCollection<BD_class.students_class>("student");
-            //return collection.Find(x => true).ToList();
+            return collection.Find(x => true).ToList();
 
         }
     }

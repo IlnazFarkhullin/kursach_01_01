@@ -20,8 +20,8 @@
             <ListView  Margin="0,42,0,0" x:Name="std"  Grid.RowSpan="2">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="№" DisplayMemberBinding ="{Binding _id}"  Width="auto"/>
-                        <GridViewColumn Header="Наименование" DisplayMemberBinding ="{Binding Name}"  Width="auto"/>
+                                               <GridViewColumn Header="Наименование" DisplayMemberBinding ="{Binding Name}"  Width="auto"/>
+                        <GridViewColumn Header="Возрост" DisplayMemberBinding ="{Binding age}"  Width="auto"/>
 
 
                     </GridView>

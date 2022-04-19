@@ -14,14 +14,15 @@ namespace kursach_01_01.BD_class
     {
         [BsonId]
         [BsonIgnoreIfDefault]
-        public int _id;
+        public ObjectId _id;
 
-        public students_class(int id, string name)
+        public students_class(ObjectId id, string name)
         {
             _id = id;
             Name = name;
         }
-
+        [BsonElement("name")]
         public string Name { get; set; }
+        public int age { get; set; }
     }
 }
