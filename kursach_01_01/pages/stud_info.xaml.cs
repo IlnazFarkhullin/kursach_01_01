@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using kursach_01_01.BD_class;
+
 namespace kursach_01_01.pages
 {
     /// <summary>
-    /// Логика взаимодействия для students_page.xaml
+    /// Логика взаимодействия для stud_info.xaml
     /// </summary>
-    public partial class students_page : Page
+    public partial class stud_info : Window
     {
-        public students_page()
+        public stud_info()
         {
             InitializeComponent();
-            std.ItemsSource= DataBaseMethods.ShowStudents();
-        }
-
-        private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }
