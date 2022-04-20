@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
-
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace kursach_01_01.BD_class
 {
@@ -34,26 +33,35 @@ namespace kursach_01_01.BD_class
 
         public string Surname { get; set; }
 
-        [BsonElement("name")]
+        //[BsonElement("name")]
         public string Name { get; set; }
-        [BsonElement("lname")]
+
+        //[BsonElement("lname")]
         public string Lname { get; set; }
-        [BsonElement("birth_date")]
+
+        //[BsonElement("birth_date")]
         public string Birth_date { get; set; }
-        [BsonElement("phone")]
+        //[BsonElement("phone")]
         public string Phone { get; set; }
-        [BsonElement("email")]
-        public string email {get;set;}
-        [BsonElement("medical_policy")]
+
+        //[BsonElement("email")]
+        public string email { get; set; }
+
+        //[BsonElement("medical_policy")]
         public string Medical_policy { get; set; }
-        [BsonElement("inn")]
+
+        //[BsonElement("inn")]
         public string INN { get; set; }
-        [BsonElement("series")]
+
+        //[BsonElement("series")]
         public string Series { get; set; }
-        [BsonElement("number")]
+
+        //[BsonElement("number")]
         public string Number { get; set; }
-        [BsonElement("registration")]
+
+        //[BsonElement("registration")]
         public string Registration { get; set; }
-        
+
     }
 }
+

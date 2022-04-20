@@ -21,7 +21,9 @@
                 <ListView.View>
                     <GridView>
                         
+                        <GridViewColumn Header="Наименование" DisplayMemberBinding ="{Binding Surname}"  Width="auto"/>
                         <GridViewColumn Header="Наименование" DisplayMemberBinding ="{Binding Name}"  Width="auto"/>
+                        <GridViewColumn Header="Наименование" DisplayMemberBinding ="{Binding Lname}"  Width="auto"/>
                        
 
 

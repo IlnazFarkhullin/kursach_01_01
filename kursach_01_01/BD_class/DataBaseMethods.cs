@@ -16,7 +16,6 @@ namespace kursach_01_01.BD_class
             var database = stud.GetDatabase("guide");
             var collection = database.GetCollection<BD_class.students_class>("Students");
             return collection.Find(x => true).ToList();
-
         }
     }
 }
