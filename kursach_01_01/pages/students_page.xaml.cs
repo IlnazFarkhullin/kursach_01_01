@@ -26,6 +26,9 @@ namespace kursach_01_01.pages
             std.ItemsSource= DataBaseMethods.ShowStudents();
         }
 
-       
+        private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

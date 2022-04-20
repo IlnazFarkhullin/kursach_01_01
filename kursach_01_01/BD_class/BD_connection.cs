@@ -12,6 +12,6 @@ namespace kursach_01_01.BD_class
     {
         private static string _connectionString = "mongodb://localhost:27017";
         private static MongoClient _client = new MongoClient(_connectionString);
-        IMongoClient MongoClient = (IMongoClient)_client.GetDatabase("test");
+        IMongoClient MongoClient = (IMongoClient)_client.GetDatabase("guide");
     }
 }

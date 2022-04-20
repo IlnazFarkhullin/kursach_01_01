@@ -13,8 +13,8 @@ namespace kursach_01_01.BD_class
         public static  List<students_class> ShowStudents()
         {
             var stud = new MongoClient("mongodb://localhost");
-            var database = stud.GetDatabase("test");
-            var collection = database.GetCollection<BD_class.students_class>("student");
+            var database = stud.GetDatabase("guide");
+            var collection = database.GetCollection<BD_class.students_class>("Students");
             return collection.Find(x => true).ToList();
 
         }
