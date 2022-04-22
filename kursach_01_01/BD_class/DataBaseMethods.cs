@@ -25,5 +25,13 @@ namespace kursach_01_01.BD_class
             var collection = database.GetCollection<authorization>("auth");
             return collection.Find(x => true).ToList();
         }
+
+        public static void AddStudentToDatabase(students_class std)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Magnit");
+            var collection = database.GetCollection<students_class>(std.Name);
+            collection.InsertOne(std);
+        }
     }
 }
