@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using kursach_01_01.pages;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using kursach_01_01.BD_class;
 
 namespace kursach_01_01.auth
 {
@@ -24,11 +27,27 @@ namespace kursach_01_01.auth
         public auth_Page()
         {
             InitializeComponent();
+            
+
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new main_page());
+           
+            var a = DataBaseMethods.Authorizations().Where(z => z.login == txt_login.Text && z.password == txt_password.Password).FirstOrDefault();
+            if (a !=null)
+            {
+                //var b = a.name.FirstOrDefault();
+                if (a.name == "Ильназ Алмазович")
+                {
+                    MessageBox.Show($"Добро пожаловать {a.name}" ,"Вход в личные кабинет", MessageBoxButton.OK, MessageBoxImage.Information);
+                    NavigationService.Navigate(new main_page());
+                }
+            }
+            else
+            {
+                MessageBox.Show($"Логин и пароль не верный!", "Вход в личный кабинет", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }

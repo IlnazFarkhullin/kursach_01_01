@@ -146,6 +146,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BD_class\authorization.cs" />
     <Compile Include="BD_class\BD_connection.cs" />
     <Compile Include="BD_class\DataBaseMethods.cs" />
     <Compile Include="BD_class\students_class.cs" />
