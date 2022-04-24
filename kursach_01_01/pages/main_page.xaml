@@ -15,11 +15,7 @@
         </Grid>
         <Grid x:Name="sidePanel" Background="#FF0F4E7A" HorizontalAlignment="Left" Width="150">
             <StackPanel>
-                <Grid Background="#FF0F4E7A" Height="30" >
-                    <Button x:Name="menu" Click="menu_Click"   HorizontalAlignment="Right" Height="25" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent">
-                        <Image Source="/ico/imenu.png"/>
-                    </Button>
-                </Grid>
+                
                  
                 <ListView  ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="12" Foreground="White" BorderBrush="Transparent" Background="Transparent">
                     <ListViewItem Selected="my_page_Selected" x:Name="my_page" Height="30">

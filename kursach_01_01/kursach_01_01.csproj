@@ -248,6 +248,7 @@
     <Resource Include="ico\pencil.png" />
     <Resource Include="ico\main_icons.png" />
     <Resource Include="ico\search.png" />
+    <Resource Include="ico\pop.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup />
