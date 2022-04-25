@@ -28,7 +28,8 @@ namespace kursach_01_01.pages
 
         private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            stud_info _Info = new stud_info();
+            _Info.Show();
         }
 
         private void serach_tb_TextChanged(object sender, TextChangedEventArgs e)
