@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using kursach_01_01.BD_class;
 
 namespace kursach_01_01.pages
 {

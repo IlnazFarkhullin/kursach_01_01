@@ -26,12 +26,12 @@ namespace kursach_01_01.BD_class
             return collection.Find(x => true).ToList();
         }
 
-        public static void AddStudentToDatabase(students_class std)
+        public static void AddStudentToDatabase(students_class students_)
         {
             var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("Magnit");
-            var collection = database.GetCollection<students_class>(std.Name);
-            collection.InsertOne(std);
+            var database = client.GetDatabase("guide");
+            var collection = database.GetCollection<students_class>("Students");
+            collection.InsertOne(students_);
         }
     }
 }

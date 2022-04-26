@@ -15,9 +15,9 @@ namespace kursach_01_01.BD_class
         [BsonIgnoreIfDefault]
         public ObjectId _id;
 
-        public students_class(ObjectId id, string surname, string name, string lname, string birth_date, string phone, string email, string medical_policy, string iNN, string series, string number, string registration)
+        public students_class( string surname, string name, string lname, string birth_date, string phone, string email, string medical_policy, string iNN, string series, string number, string registration)
         {
-            _id = id;
+           
             Surname = surname;
             Name = name;
             Lname = lname;

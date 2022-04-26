@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Справочник старосты" 
         Height="450" Width="800" WindowStartupLocation="CenterScreen"
-        Icon="ico/main_icons.png">
+        Icon="ico/main_icons.png" ResizeMode="NoResize">
     <Grid Background="Azure">
         <Grid.ColumnDefinitions  >
             <ColumnDefinition/>

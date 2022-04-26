@@ -30,12 +30,15 @@ namespace kursach_01_01.pages
         {
             stud_info _Info = new stud_info();
             _Info.Show();
+            
         }
 
         private void serach_tb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //std.ItemsSource = conn.entities.info.ToList().Where(z => z.name.Contains(search.Text)); //поиск по имени
-            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));
+          
+            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));//поиск по имени
+            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Surname.Contains(serach_tb.Text));//поиск о фамилии
+            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));// поиск по отчеству
         }
     }
 }

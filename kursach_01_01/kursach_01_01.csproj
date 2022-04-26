@@ -190,6 +190,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pages\regestration_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\students_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -200,6 +204,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\regestration_page.xaml.cs">
+      <DependentUpon>regestration_page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\students_page.xaml.cs">
       <DependentUpon>students_page.xaml</DependentUpon>
     </Compile>
@@ -242,13 +249,14 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
-    <Resource Include="ico\imenu.png" />
     <Resource Include="ico\imy_page.png" />
     <Resource Include="ico\istudens.png" />
     <Resource Include="ico\pencil.png" />
     <Resource Include="ico\main_icons.png" />
     <Resource Include="ico\search.png" />
     <Resource Include="ico\pop.png" />
+    <Resource Include="ico\raspisanie.png" />
+    <Resource Include="ico\five.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup />
