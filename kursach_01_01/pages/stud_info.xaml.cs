@@ -21,13 +21,21 @@ namespace kursach_01_01.pages
     public partial class stud_info : Window
     {
        
-        public stud_info(students_class datastud)
+        public stud_info(students_class datastud)//приём данных из одной формы на данную форму
         {
             InitializeComponent();
+            // поля которые принемают данные
             txt_surname.Text = datastud.Surname;
             txt_name.Text = datastud.Name;
             txt_lname.Text = datastud.Lname;
             birthday.Text = datastud.Birth_date;
+            phone_number.Text = datastud.Phone;
+            Medical_policy.Text = datastud.Medical_policy;
+            INN.Text = datastud.INN;
+            series.Text = datastud.Series;
+            number.Text = datastud.Number;
+            regis.Text = datastud.Registration;
+            email.Text = datastud.email;
         }
     }
 }
