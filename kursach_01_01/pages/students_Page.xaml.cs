@@ -28,7 +28,8 @@ namespace kursach_01_01.pages
 
         private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            stud_info _Info = new stud_info();
+            var datastud = ((sender as ListView).SelectedItem as students_class);
+            stud_info _Info = new stud_info(datastud);
             _Info.Show();
             
         }

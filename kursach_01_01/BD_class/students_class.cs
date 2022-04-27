@@ -9,7 +9,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace kursach_01_01.BD_class
 {
-    class students_class
+   public class students_class
     {
         [BsonId]
         [BsonIgnoreIfDefault]
