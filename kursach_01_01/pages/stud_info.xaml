@@ -24,6 +24,8 @@
             <TextBox x:Name="txt_name"/>
             <TextBlock Text="Отчество:"/>
             <TextBox x:Name="txt_lname"/>
+            <TextBlock Text="Дата рождения:"/>
+            <TextBlock x:Name="birthday" Height="30" Width="200" HorizontalAlignment="Left"></TextBlock>
 
         </StackPanel>
 

@@ -20,15 +20,14 @@ namespace kursach_01_01.pages
     /// </summary>
     public partial class stud_info : Window
     {
-        public static students_class currentSrudent;
        
         public stud_info(students_class datastud)
         {
             InitializeComponent();
-            this 
             txt_surname.Text = datastud.Surname;
             txt_name.Text = datastud.Name;
             txt_lname.Text = datastud.Lname;
+            birthday.Text = datastud.Birth_date;
         }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:kursach_01_01"
         mc:Ignorable="d"
         Title="Справочник старосты" 
-        Height="800" Width="1300" WindowStartupLocation="CenterScreen"
+        Height="770" Width="1200" WindowStartupLocation="CenterScreen"
         Icon="ico/main_icons.png" ResizeMode="NoResize">
     <Grid Background="Azure">
         <Grid.ColumnDefinitions  >

@@ -28,7 +28,7 @@ namespace kursach_01_01.pages
 
         private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var datastud = ((sender as ListView).SelectedItem as students_class);
+            var datastud = ((sender as ListView).SelectedItem as students_class);// передача данных на другую форму
             stud_info _Info = new stud_info(datastud);
             _Info.Show();
             
@@ -36,7 +36,7 @@ namespace kursach_01_01.pages
 
         private void serach_tb_TextChanged(object sender, TextChangedEventArgs e)
         {
-          
+
             std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));//поиск по имени
             std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Surname.Contains(serach_tb.Text));//поиск о фамилии
             std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));// поиск по отчеству

@@ -148,6 +148,7 @@
     </ApplicationDefinition>
     <Compile Include="BD_class\authorization.cs" />
     <Compile Include="BD_class\BD_connection.cs" />
+    <Compile Include="BD_class\CurrentStud.cs" />
     <Compile Include="BD_class\DataBaseMethods.cs" />
     <Compile Include="BD_class\students_class.cs" />
     <Compile Include="pages\demo.xaml.cs">
@@ -253,10 +254,10 @@
     <Resource Include="ico\istudens.png" />
     <Resource Include="ico\pencil.png" />
     <Resource Include="ico\main_icons.png" />
-    <Resource Include="ico\search.png" />
     <Resource Include="ico\pop.png" />
     <Resource Include="ico\raspisanie.png" />
     <Resource Include="ico\five.png" />
+    <Resource Include="ico\search.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup />
