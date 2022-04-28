@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel VerticalAlignment="Top" Height="344" Grid.Row="1" Grid.Column="0" Margin="0,8,12.2,0">
             <TextBlock Text="Фамиля:" />
-            <TextBox x:Name="txt_surname" Width="200" HorizontalAlignment="Left" Margin="5,0,0,10"/>
+            <TextBox x:Name="txt_surname" Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Имя:"/>
             <TextBox x:Name="txt_name"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Отчество:"/>

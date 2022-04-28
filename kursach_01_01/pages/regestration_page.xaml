@@ -31,8 +31,22 @@
                 <TextBlock Text="Дата рождения:"/>
                 <DatePicker x:Name="birthday" Height="30" Width="200" HorizontalAlignment="Left"></DatePicker>
                 <!--<TextBox x:Name="txt_spes" Height="20" Width="200" HorizontalAlignment="Left" />-->
-                
-            </StackPanel>
+                <TextBlock Text="Номер телефона"/>
+                <TextBox x:Name="phone" Height="20" Width="200" HorizontalAlignment="Left"/>
+                <TextBlock Text="Медицинский полис"/>
+                <TextBox x:Name="medic_polic" Height="20" Width="200" HorizontalAlignment="Left"/>
+                <TextBlock Text="ИНН"/>
+                <TextBox x:Name="innn" Height="20" Width="200" HorizontalAlignment="Left"/>
+                <TextBlock Text="Номер серии"/>
+                <TextBox x:Name="seriya" Height="20" Width="200" HorizontalAlignment="Left"/>
+                <TextBlock Text="Код паспорта"/>
+                <TextBox x:Name="kod" Height="20" Width="200" HorizontalAlignment="Left"/>
+                <TextBlock Text="Регистрация"/>
+                <TextBox x:Name="reg" Height="20" Width="200" HorizontalAlignment="Left"/>
+                <TextBlock Text="e-mail"/>
+                <TextBox x:Name="mail" Height="20" Width="200" HorizontalAlignment="Left"/>
+                <Button  Content="Добавить" x:Name="adddd" Click="adddd_Click"/>
+            </StackPanel> 
             
         </Grid>
     </Grid>

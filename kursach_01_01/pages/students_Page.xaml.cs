@@ -23,13 +23,15 @@ namespace kursach_01_01.pages
         public students_page()
         {
             InitializeComponent();
-            std.ItemsSource= DataBaseMethods.ShowStudents();
+            std.ItemsSource= DataBaseMethods.ShowStudents(); // std - это ListView
+                                                             // DataBaseMethods -это класс где хранятся всякие методы
+                                                             //ShowStudents(); - это метод из класса DataBaseMethods. Этот метод выводит студентов
         }
 
         private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var datastud = ((sender as ListView).SelectedItem as students_class);// передача данных на другую форму
-            stud_info _Info = new stud_info(datastud);
+            stud_info _Info = new stud_info(datastud);// передача данных на другую форму
             _Info.Show();
             
         }
@@ -40,6 +42,11 @@ namespace kursach_01_01.pages
            // std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));//поиск по имени
             std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Surname.Contains(serach_tb.Text));//поиск о фамилии
             //std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));// поиск по отчеству
+        }
+
+        private void add_students_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new regestration_page());
         }
     }
 }

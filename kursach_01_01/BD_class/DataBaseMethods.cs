@@ -12,10 +12,10 @@ namespace kursach_01_01.BD_class
     {
         public static  List<students_class> ShowStudents()
         {
-            var stud = new MongoClient("mongodb://localhost");
-            var database = stud.GetDatabase("guide");
-            var collection = database.GetCollection<BD_class.students_class>("Students");
-            return collection.Find(x => true).ToList();
+            var stud = new MongoClient("mongodb://localhost"); // подключение
+            var database = stud.GetDatabase("guide"); // бд
+            var collection = database.GetCollection<BD_class.students_class>("Students"); // коллекция внутри БД
+            return collection.Find(x => true).ToList(); // возвращение всех данных из коллекции
         }
       
 

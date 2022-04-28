@@ -258,6 +258,7 @@
     <Resource Include="ico\raspisanie.png" />
     <Resource Include="ico\five.png" />
     <Resource Include="ico\search.png" />
+    <Resource Include="ico\ADD.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup />
