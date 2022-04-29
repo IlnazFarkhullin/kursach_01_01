@@ -12,16 +12,19 @@
         <Grid Background="Azure" Margin="0,0,-113,-127">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="199*"/>
-                <ColumnDefinition Width="657*"/>
-                <ColumnDefinition Width="57*" />
+                <ColumnDefinition Width="214*"/>
+                <ColumnDefinition Width="499*" />
 
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="44*"/>
-                <RowDefinition Height="533*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="517*"/>
 
             </Grid.RowDefinitions>
-            <StackPanel  Grid.Column="1" Grid.Row="1">
+            <Grid Grid.Row="0"  x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" HorizontalAlignment="Right" Width="913" Grid.ColumnSpan="3">
+                <TextBlock Text="Регистрация студента" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
+            </Grid>
+            <StackPanel Grid.ColumnSpan="3" Margin="199,51,167.8,-0.2" HorizontalAlignment="Stretch" Grid.RowSpan="2" >
                 <TextBlock Text="Фамилия:"  />
                 <TextBox x:Name="txt_sname" Height="20" Width="200" HorizontalAlignment="Left" />
                 <TextBlock Text="Имя:"/>
@@ -37,17 +40,26 @@
                 <TextBox x:Name="medic_polic" Height="20" Width="200" HorizontalAlignment="Left"/>
                 <TextBlock Text="ИНН"/>
                 <TextBox x:Name="innn" Height="20" Width="200" HorizontalAlignment="Left"/>
+                <TextBlock Text="e-mail"/>
+                <TextBox x:Name="mail" Height="20" Width="200" HorizontalAlignment="Left"/>
+                <Button  Content="Добавить" x:Name="adddd" Click="adddd_Click"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Stretch" Margin="0.4,51,-0.2,-0.2" Grid.RowSpan="2">
+                <TextBlock Text="Паспортные данные:"/>
                 <TextBlock Text="Номер серии"/>
                 <TextBox x:Name="seriya" Height="20" Width="200" HorizontalAlignment="Left"/>
                 <TextBlock Text="Код паспорта"/>
                 <TextBox x:Name="kod" Height="20" Width="200" HorizontalAlignment="Left"/>
                 <TextBlock Text="Регистрация"/>
                 <TextBox x:Name="reg" Height="20" Width="200" HorizontalAlignment="Left"/>
-                <TextBlock Text="e-mail"/>
-                <TextBox x:Name="mail" Height="20" Width="200" HorizontalAlignment="Left"/>
-                <Button  Content="Добавить" x:Name="adddd" Click="adddd_Click"/>
-            </StackPanel> 
-            
+            </StackPanel>
+            <StackPanel Margin="0,51,0.2,-0.2" Grid.RowSpan="2">
+
+                <Button HorizontalAlignment="Left" Margin="0" Background="White" Foreground="Aqua" FontSize="18" Width="50"  Height="29" x:Name="back" Click="back_Click">
+                    <Image Source="/ico/back.png"/>
+                </Button>
+
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>

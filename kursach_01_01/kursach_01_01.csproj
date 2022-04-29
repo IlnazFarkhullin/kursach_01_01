@@ -147,7 +147,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BD_class\authorization.cs" />
-    <Compile Include="BD_class\BD_connection.cs" />
     <Compile Include="BD_class\CurrentStud.cs" />
     <Compile Include="BD_class\DataBaseMethods.cs" />
     <Compile Include="BD_class\students_class.cs" />
@@ -259,6 +258,11 @@
     <Resource Include="ico\five.png" />
     <Resource Include="ico\search.png" />
     <Resource Include="ico\ADD.png" />
+    <Resource Include="ico\back.png" />
+    <Resource Include="ico\std.png" />
+    <Resource Include="ico\Delete.png" />
+    <Resource Include="ico\sort_az.png" />
+    <Resource Include="ico\sort_za.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup />

@@ -34,6 +34,9 @@ namespace kursach_01_01.pages
             stud_info _Info = new stud_info(datastud);// передача данных на другую форму
             _Info.Show();
             
+
+           
+            
         }
 
         private void serach_tb_TextChanged(object sender, TextChangedEventArgs e)
@@ -47,6 +50,27 @@ namespace kursach_01_01.pages
         private void add_students_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new regestration_page());
+        }
+
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+            var a = std.SelectedItem as students_class;
+            
+           DataBaseMethods.RemoveStudentToDatabase(a);
+                
+               
+                
+            
+        }
+
+        private void sort_az_Click(object sender, RoutedEventArgs e)
+        {
+            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().OrderBy(z => z.Surname);//Сортировка по алфавиту от А до Я
+        }
+
+        private void sort_za_Click(object sender, RoutedEventArgs e)
+        {
+            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Surname.Contains(serach_tb.Text));//Сортировка по алфавиту от Я до А
         }
     }
 }
