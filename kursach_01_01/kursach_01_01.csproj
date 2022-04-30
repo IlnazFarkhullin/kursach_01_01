@@ -149,10 +149,8 @@
     <Compile Include="BD_class\authorization.cs" />
     <Compile Include="BD_class\CurrentStud.cs" />
     <Compile Include="BD_class\DataBaseMethods.cs" />
+    <Compile Include="BD_class\notes_class.cs" />
     <Compile Include="BD_class\students_class.cs" />
-    <Compile Include="pages\demo.xaml.cs">
-      <DependentUpon>demo.xaml</DependentUpon>
-    </Compile>
     <Compile Include="pages\main_page.xaml.cs">
       <DependentUpon>main_page.xaml</DependentUpon>
     </Compile>
@@ -178,15 +176,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="pages\demo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="pages\main_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pages\my_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\notes_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -202,8 +200,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pages\timetable_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\notes_page.xaml.cs">
+      <DependentUpon>notes_page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\regestration_page.xaml.cs">
       <DependentUpon>regestration_page.xaml</DependentUpon>
     </Compile>
@@ -212,6 +217,9 @@
     </Compile>
     <Compile Include="pages\stud_info.xaml.cs">
       <DependentUpon>stud_info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\timetable_page.xaml.cs">
+      <DependentUpon>timetable_page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -262,7 +270,6 @@
     <Resource Include="ico\std.png" />
     <Resource Include="ico\Delete.png" />
     <Resource Include="ico\sort_az.png" />
-    <Resource Include="ico\sort_za.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup />

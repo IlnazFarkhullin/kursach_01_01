@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using kursach_01_01.BD_class;
 
 namespace kursach_01_01.BD_class
 {
@@ -16,6 +17,14 @@ namespace kursach_01_01.BD_class
             var database = stud.GetDatabase("guide"); // бд
             var collection = database.GetCollection<BD_class.students_class>("Students"); // коллекция внутри БД
             return collection.Find(x => true).ToList(); // возвращение всех данных из коллекции
+        }
+
+        public static List<notes_class> ShowNotes()
+        {
+            var notes = new MongoClient("mongodb://localhost");
+            var datbase = notes.GetDatabase("guide");
+            var collection = datbase.GetCollection<notes_class>("Notes");
+            return collection.Find(x => true).ToList();
         }
       
 

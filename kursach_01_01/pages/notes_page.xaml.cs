@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace kursach_01_01.pages
 {
     /// <summary>
-    /// Логика взаимодействия для demo.xaml
+    /// Логика взаимодействия для notes_page.xaml
     /// </summary>
-    public partial class demo : Page
+    public partial class notes_page : Page
     {
-        public demo()
+        public notes_page()
         {
             InitializeComponent();
         }

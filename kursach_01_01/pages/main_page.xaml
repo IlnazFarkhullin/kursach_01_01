@@ -10,7 +10,7 @@
       >
 
     <Grid>
-        <Grid x:Name="pahel_header" VerticalAlignment="Top" Height="50" MouseDown="pahel_header_MouseDown">
+        <Grid x:Name="pahel_header" VerticalAlignment="Top" Height="50">
             
         </Grid>
         <Grid x:Name="sidePanel" Background="#FF0F4E7A" HorizontalAlignment="Left" Width="150">
@@ -30,13 +30,13 @@
                             <TextBlock Margin="10,0,0,0" Text="Студенты" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="notes" Height="30" >
+                    <ListViewItem  x:Name="notes"  Selected="notes_Selected" Height="30" >
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/ico/pencil.png" Height="25" VerticalAlignment="Center"/>
                             <TextBlock Margin="10,0,0,0" Text="Заметки" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="schedule" Height="30" >
+                    <ListViewItem x:Name="schedule" Selected="schedule_Selected" Height="30" >
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/ico/raspisanie.png" Height="25" VerticalAlignment="Center"/>
                             <TextBlock Margin="10,0,0,0" Text="Расписание" VerticalAlignment="Center"/>

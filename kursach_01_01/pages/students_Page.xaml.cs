@@ -32,7 +32,7 @@ namespace kursach_01_01.pages
         {
             var datastud = ((sender as ListView).SelectedItem as students_class);// передача данных на другую форму
             stud_info _Info = new stud_info(datastud);// передача данных на другую форму
-            _Info.Show();
+            _Info.Show();// открытие окна при нажатии на элемент ListView
             
 
            
@@ -41,10 +41,7 @@ namespace kursach_01_01.pages
 
         private void serach_tb_TextChanged(object sender, TextChangedEventArgs e)
         {
-
-           // std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));//поиск по имени
             std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Surname.Contains(serach_tb.Text));//поиск о фамилии
-            //std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));// поиск по отчеству
         }
 
         private void add_students_Click(object sender, RoutedEventArgs e)
@@ -57,10 +54,6 @@ namespace kursach_01_01.pages
             var a = std.SelectedItem as students_class;
             
            DataBaseMethods.RemoveStudentToDatabase(a);
-                
-               
-                
-            
         }
 
         private void sort_az_Click(object sender, RoutedEventArgs e)
@@ -68,9 +61,6 @@ namespace kursach_01_01.pages
             std.ItemsSource = DataBaseMethods.ShowStudents().ToList().OrderBy(z => z.Surname);//Сортировка по алфавиту от А до Я
         }
 
-        private void sort_za_Click(object sender, RoutedEventArgs e)
-        {
-            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Surname.Contains(serach_tb.Text));//Сортировка по алфавиту от Я до А
-        }
+        
     }
 }

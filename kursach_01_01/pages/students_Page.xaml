@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="students_page">
-    <Grid>
+    <Grid Background="Azure">
         <Grid.RowDefinitions>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="41*"/>
@@ -31,9 +31,7 @@
                 <Button HorizontalAlignment="Right" Margin="0" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="sort_az" Click="sort_az_Click">
                     <Image Source="/ico/sort_az.png"/>
                 </Button>
-                <Button HorizontalAlignment="Right" Margin="0" Background="DarkGray" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="sort_za" Click="sort_za_Click">
-                    <Image Source="/ico/sort_za.png"/>
-                </Button>
+                
             </StackPanel>
             <StackPanel>
                 <ListView   x:Name="std" SelectionChanged="std_SelectionChanged" RenderTransformOrigin="0.5,0.5">
@@ -43,6 +41,7 @@
                             <GridViewColumn Header="Фамилия" DisplayMemberBinding ="{Binding Surname}"  Width="auto"/>
                             <GridViewColumn Header="Имя" DisplayMemberBinding ="{Binding Name}"  Width="auto"/>
                             <GridViewColumn Header="Отчество" DisplayMemberBinding ="{Binding Lname}"  Width="auto"/>
+                            <GridViewColumn Header="Номер телефона" DisplayMemberBinding ="{Binding Phone}"  Width="auto"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
