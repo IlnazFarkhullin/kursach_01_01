@@ -19,6 +19,39 @@ namespace kursach_01_01.BD_class
             return collection.Find(x => true).ToList(); // возвращение всех данных из коллекции
         }
 
+        public static void EditStudent(string Surname, string Name, string Lname, string Phone,  string email, string Registration, string NewPhone, string NewSurname, string NewName, string newLname, string NewEmail, string newRegistration) 
+        {
+            var stud = new MongoClient("mongodb://localhost");
+            var database = stud.GetDatabase("guide");
+            var collection = database.GetCollection<students_class>("Students");
+
+            var filterName = Builders<students_class>.Filter.Eq("Name", Name);
+            var updateName = Builders<students_class>.Update.Set(x => x.Name, NewName);
+
+            var filterSurname = Builders<students_class>.Filter.Eq("Surname", Surname);
+            var updateSurname = Builders<students_class>.Update.Set(x => x.Surname, NewSurname);
+
+            var filterLname = Builders<students_class>.Filter.Eq("Lname", Lname);
+            var updateLname = Builders<students_class>.Update.Set(x => x.Lname, newLname);
+
+            var filterPhone = Builders<students_class>.Filter.Eq("Phone", Phone);
+            var updatePhone = Builders<students_class>.Update.Set(x => x.Phone, NewPhone);
+
+            var filterEmail = Builders<students_class>.Filter.Eq("email", email);
+            var updateEmail = Builders<students_class>.Update.Set(x => x.email, NewEmail);
+
+            var filterRegistration = Builders<students_class>.Filter.Eq("Registrstion", Registration);
+            var updateRegistration = Builders<students_class>.Update.Set(x => x.Registration, Registration);
+
+            collection.UpdateOne(filterSurname , updateSurname);
+            collection.UpdateOne(filterName , updateName);
+            collection.UpdateOne(filterLname , updateLname);
+            collection.UpdateOne(filterPhone , updatePhone);
+            collection.UpdateOne(filterEmail , updateEmail);
+            collection.UpdateOne(filterRegistration, updateRegistration);
+
+    }
+
         public static List<notes_class> ShowNotes()
         {
             var notes = new MongoClient("mongodb://localhost");

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using kursach_01_01.BD_class;
+using kursach_01_01.pages;
 
 namespace kursach_01_01.pages
 {
@@ -36,6 +37,15 @@ namespace kursach_01_01.pages
             number.Text = datastud.Number;
             regis.Text = datastud.Registration;
             email.Text = datastud.email;
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            //var selectedStudent = dann.SelectedItem as students_class;
+            //DataBaseMethods.EditStudent(selectedStudent.Surname, selectedStudent.Name, selectedStudent.Lname, selectedStudent.email, selected.Phone, selectedStudent.Registration);
+            //MessageBox.Show("Изменения сохранены");
+
+
         }
     }
 }

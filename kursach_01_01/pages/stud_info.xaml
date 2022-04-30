@@ -18,7 +18,8 @@
             <ColumnDefinition Width="262*" />
             <ColumnDefinition Width="161*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel VerticalAlignment="Top" Height="344" Grid.Row="1" Grid.Column="0" Margin="0,8,12.2,0">
+        <StackPanel Grid.Row="1" Grid.Column="0" x:Name="dann">
+            <StackPanel VerticalAlignment="Top" Height="344"  Margin="0,8,12.2,0">
             <TextBlock Text="Фамиля:" />
             <TextBox x:Name="txt_surname" Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Имя:"/>
@@ -37,17 +38,18 @@
             <TextBox x:Name="email"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
 
         </StackPanel>
-        <StackPanel Margin="9.8,2,2.8,0" Grid.Row="1" Grid.Column="1">
-            <TextBlock Text="Паспортные данные" HorizontalAlignment="Center"/>
-            <TextBlock Text="Номер серии:"/>
-            <TextBox x:Name="series"/>
-            <TextBlock Text="Код пасрота:"/>
-            <TextBox x:Name="number"/>
-            <TextBlock Text="Регистрация:"/>
-            <TextBox x:Name="regis"/>
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10,2,3.2,0" >
+                <TextBlock Text="Паспортные данные" HorizontalAlignment="Center"/>
+                <TextBlock Text="Номер серии:"/>
+                <TextBox x:Name="series"/>
+                <TextBlock Text="Код пасрота:"/>
+                <TextBox x:Name="number"/>
+                <TextBlock Text="Регистрация:"/>
+                <TextBox x:Name="regis"/>
 
+                <Button Content="Сохранить" x:Name="Edit" Click="Edit_Click" />
 
-
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
