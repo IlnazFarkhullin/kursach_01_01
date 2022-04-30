@@ -15,15 +15,15 @@ namespace kursach_01_01.BD_class
         [BsonIgnoreIfDefault]
         public ObjectId _id;
 
-        public notes_class(string name_notes, string text, bool @bool)
+        public notes_class(string name_notes, string text,  DateTime date)
         {
             Name_notes = name_notes;
             Text = text;
-            Bool = @bool;
+            Date = date;
         }
 
         public string Name_notes { get; set; }
         public string Text { get; set; }
-        public bool Bool { get; set; }
+        public DateTime Date{get;set;}
     }
 }

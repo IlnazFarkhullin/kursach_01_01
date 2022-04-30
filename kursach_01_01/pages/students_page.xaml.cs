@@ -23,18 +23,44 @@ namespace kursach_01_01.pages
         public students_page()
         {
             InitializeComponent();
-            std.ItemsSource= DataBaseMethods.ShowStudents();
+            std.ItemsSource= DataBaseMethods.ShowStudents(); // std - это ListView
+                                                             // DataBaseMethods -это класс где хранятся всякие методы
+                                                             //ShowStudents(); - это метод из класса DataBaseMethods. Этот метод выводит студентов
         }
 
         private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var datastud = ((sender as ListView).SelectedItem as students_class);// передача данных на другую форму
+            stud_info _Info = new stud_info(datastud);// передача данных на другую форму
+            _Info.Show();// открытие окна при нажатии на элемент ListView
+            
 
+           
+            
         }
 
         private void serach_tb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //std.ItemsSource = conn.entities.info.ToList().Where(z => z.name.Contains(search.Text)); //поиск по имени
-            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Name.Contains(serach_tb.Text));
+            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().Where(z => z.Surname.Contains(serach_tb.Text));//поиск о фамилии
         }
+
+        private void add_students_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new regestration_page());
+        }
+
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+            var a = std.SelectedItem as students_class;
+            
+           DataBaseMethods.RemoveStudentToDatabase(a);
+        }
+
+        private void sort_az_Click(object sender, RoutedEventArgs e)
+        {
+            std.ItemsSource = DataBaseMethods.ShowStudents().ToList().OrderBy(z => z.Surname);//Сортировка по алфавиту от А до Я
+        }
+
+        
     }
 }
