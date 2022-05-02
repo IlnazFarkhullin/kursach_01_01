@@ -52,6 +52,23 @@ namespace kursach_01_01.BD_class
 
     }
 
+        public static void AddStudentToDatabase(students_class students_)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("guide");
+            var collection = database.GetCollection<students_class>("Students");
+            collection.InsertOne(students_);
+        }
+
+        public static void RemoveStudentToDatabase(students_class students_)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("guide");
+            var collection = database.GetCollection<students_class>("Students");
+            collection.DeleteOne(s => s.Surname == "surname");
+
+        }
+
         public static List<notes_class> ShowNotes()
         {
             var notes = new MongoClient("mongodb://localhost");
@@ -59,7 +76,15 @@ namespace kursach_01_01.BD_class
             var collection = datbase.GetCollection<notes_class>("Notes");
             return collection.Find(x => true).ToList();
         }
-      
+        public static void AddSNotes(notes_class nots_)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("guide");
+            var collection = database.GetCollection<notes_class>("Notes");
+            collection.InsertOne(nots_);
+        }
+
+
 
         public static List<authorization> Authorizations()
         {
@@ -69,20 +94,7 @@ namespace kursach_01_01.BD_class
             return collection.Find(x => true).ToList();
         }
 
-        public static void AddStudentToDatabase(students_class students_)
-        {
-            var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("guide");
-            var collection = database.GetCollection<students_class>("Students");
-            collection.InsertOne(students_);
-        }
-        public static void RemoveStudentToDatabase(students_class students_)
-        {
-            var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("guide");
-            var collection = database.GetCollection<students_class>("Students");
-            collection.DeleteOne(s=> s.Surname == "surname");
-
-        }
+       
+       
     }
 }

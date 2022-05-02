@@ -151,6 +151,9 @@
     <Compile Include="BD_class\DataBaseMethods.cs" />
     <Compile Include="BD_class\notes_class.cs" />
     <Compile Include="BD_class\students_class.cs" />
+    <Compile Include="pages\add_notes.xaml.cs">
+      <DependentUpon>add_notes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\main_page.xaml.cs">
       <DependentUpon>main_page.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="pages\add_notes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\main_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

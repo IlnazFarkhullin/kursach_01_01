@@ -16,8 +16,13 @@
 
         <Grid Grid.Row="0"  x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" >
             <TextBlock Text="Заметки" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
+            
         </Grid>
+        
         <StackPanel Grid.Row="1">
+            <Button HorizontalAlignment="Left" Margin="0" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="add_notes" Click="add_notes_Click">
+                <Image Source="/ico/ADD.png"/>
+            </Button>
             <ListView   SelectionChanged="not_SelectionChanged"  x:Name="not"    Margin="0,0,584,0">
                 <ListView.View>
                     <GridView>
@@ -28,9 +33,10 @@
         </StackPanel>
         <StackPanel Width="524" Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,33,209.6">
             <TextBlock Text="Наименование:"/>
-            <TextBox x:Name="name" Margin="0,0,290,0"/>
+            <TextBox SpellCheck.IsEnabled="True" Language="ru-ru" x:Name="name" Margin="0,0,290,0"/>
             <TextBlock Text="Текст"/>
             <TextBox SpellCheck.IsEnabled="True" Language="ru-ru" x:Name="text" Height="134"/>
+            
 
         </StackPanel>
 

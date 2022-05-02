@@ -37,5 +37,10 @@ namespace kursach_01_01.pages
             name.Text = datastud.Name_notes;
             text.Text = datastud.Text;
         }
+
+        private void add_notes_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new add_notes());
+        }
     }
 }
