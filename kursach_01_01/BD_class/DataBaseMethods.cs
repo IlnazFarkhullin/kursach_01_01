@@ -81,7 +81,7 @@ namespace kursach_01_01.BD_class
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("guide");
             var collection = database.GetCollection<students_class>("Students");
-            collection.DeleteOne(s=> s.Surname == "" || s.Name == "" || s.Lname== "");
+            collection.DeleteOne(s=> s.Surname == "surname");
 
         }
     }

@@ -9,7 +9,7 @@ using MongoDB.Driver;
 
 namespace kursach_01_01.BD_class
 {
-    class notes_class
+    public class notes_class
     {
         [BsonId]
         [BsonIgnoreIfDefault]

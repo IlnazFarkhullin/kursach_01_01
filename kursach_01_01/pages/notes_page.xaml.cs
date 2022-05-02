@@ -26,12 +26,16 @@ namespace kursach_01_01.pages
         public notes_page()
         {
             InitializeComponent();
+            //name.Text = datastud.Name_notes;
+            //text.Text = datastud.Text;
             not.ItemsSource = DataBaseMethods.ShowNotes().ToList(); 
         }
 
         private void not_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var datastud = ((sender as ListView).SelectedItem as notes_class);
+            name.Text = datastud.Name_notes;
+            text.Text = datastud.Text;
         }
     }
 }

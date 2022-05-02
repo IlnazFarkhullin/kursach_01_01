@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using kursach_01_01.BD_class;
 
 namespace kursach_01_01.pages
 {
@@ -55,6 +56,7 @@ namespace kursach_01_01.pages
 
         private void notes_Selected(object sender, RoutedEventArgs e)
         {
+           
             page.Navigate(new notes_page()); // открытие на Frame page страницы notes_page
         }
 

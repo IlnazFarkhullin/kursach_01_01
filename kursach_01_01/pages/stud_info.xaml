@@ -18,8 +18,8 @@
             <ColumnDefinition Width="262*" />
             <ColumnDefinition Width="161*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="1" Grid.Column="0" x:Name="dann">
-            <StackPanel VerticalAlignment="Top" Height="344"  Margin="0,8,12.2,0">
+       
+            <StackPanel  Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="344"  Margin="0,8,12.2,0">
             <TextBlock Text="Фамиля:" />
             <TextBox x:Name="txt_surname" Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Имя:"/>
@@ -36,9 +36,9 @@
             <TextBox x:Name="INN"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="e-mail:"/>
             <TextBox x:Name="email"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
-
-        </StackPanel>
-            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10,2,3.2,0" >
+              
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Right" Margin="10,2,3.2,0" >
                 <TextBlock Text="Паспортные данные" HorizontalAlignment="Center"/>
                 <TextBlock Text="Номер серии:"/>
                 <TextBox x:Name="series"/>
@@ -50,6 +50,8 @@
                 <Button Content="Сохранить" x:Name="Edit" Click="Edit_Click" />
 
             </StackPanel>
-        </StackPanel>
+            
+
+        
     </Grid>
 </Window>

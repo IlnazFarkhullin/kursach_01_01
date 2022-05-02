@@ -18,7 +18,7 @@
             <TextBlock Text="Заметки" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
         </Grid>
         <StackPanel Grid.Row="1">
-            <ListView   SelectionChanged="not_SelectionChanged"  x:Name="not"  RenderTransformOrigin="0.5,0.5" Height="25" Margin="0,0,584,0">
+            <ListView   SelectionChanged="not_SelectionChanged"  x:Name="not"    Margin="0,0,584,0">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Наименование" DisplayMemberBinding ="{Binding Name_notes }"  Width="auto"/>
@@ -30,7 +30,7 @@
             <TextBlock Text="Наименование:"/>
             <TextBox x:Name="name" Margin="0,0,290,0"/>
             <TextBlock Text="Текст"/>
-            <TextBox x:Name="text" Height="134"/>
+            <TextBox SpellCheck.IsEnabled="True" Language="ru-ru" x:Name="text" Height="134"/>
 
         </StackPanel>
 

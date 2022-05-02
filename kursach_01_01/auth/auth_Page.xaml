@@ -30,7 +30,7 @@
             <TextBlock>
                 <Span  Foreground="White">Введите логин:</Span>
             </TextBlock>
-            <TextBox   x:Name="txt_login"/>
+            <TextBox BorderBrush="Black"  x:Name="txt_login"/>
             <TextBlock>
                <Span  Foreground="White">Введите пароль:</Span>
             </TextBlock>

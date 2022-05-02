@@ -42,8 +42,9 @@ namespace kursach_01_01.pages
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
             //var selectedStudent = dann.SelectedItem as students_class;
-            //DataBaseMethods.EditStudent(selectedStudent.Surname, selectedStudent.Name, selectedStudent.Lname, selectedStudent.email, selected.Phone, selectedStudent.Registration);
-            //MessageBox.Show("Изменения сохранены");
+            var datastud = ((sender as ListView).SelectedItem as students_class);
+            DataBaseMethods.EditStudent(datastud.Surname, datastud.Name, datastud.Lname, datastud.email, datastud.Phone, datastud.Registration, txt_surname.Text, txt_name.Text, txt_lname.Text, email.Text, phone_number.Text, regis.Text);
+            MessageBox.Show("Изменения сохранены");
 
 
         }
