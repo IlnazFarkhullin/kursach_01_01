@@ -32,14 +32,14 @@ using MongoDB.Driver;
 
         private void adddd_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_name.Text) || string.IsNullOrEmpty(txt_sname.Text)) //проверка напустое значение
+            if (string.IsNullOrEmpty(txt_name.Text) || string.IsNullOrEmpty(txt_sname.Text)) //проверка на пустое значение
             {
-                MessageBox.Show("Запоните поля Имя  и Фамилия !!!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Запоните поля Имя  и Фамилия !!!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
-            students_class stud = new students_class(txt_sname.Text, txt_name.Text, txt_lastname.Text, birthday.ToString(), phone.Text,   mail.Text, medic_polic.Text, innn.Text, seriya.Text, kod.Text, reg.Text);
-              DataBaseMethods.AddStudentToDatabase(stud);
+               students_class stud = new students_class(txt_sname.Text, txt_name.Text, txt_lastname.Text, birthday.ToString(), phone.Text,   mail.Text, medic_polic.Text, innn.Text, seriya.Text, kod.Text, reg.Text);
+               DataBaseMethods.AddStudentToDatabase(stud);
                MessageBox.Show($"Студент:\n {txt_sname.Text} {txt_name.Text} {txt_lastname.Text} зарегестрирован", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
             }
            
@@ -53,20 +53,7 @@ using MongoDB.Driver;
             NavigationService.Navigate(new students_page());
         }
 
-        private void txt_sname_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (txt_sname.Text.Length >= 4)
-            {
-                adddd.IsEnabled = true;
-            }
-            else if (txt_name.Text.Length >= 4)
-            {
-                adddd.IsEnabled = true;
-            }
-            else
-            {
-                adddd.IsEnabled = false;
-            }
-        }
+        
+        
     }
 }

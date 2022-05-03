@@ -33,7 +33,7 @@
 
             <StackPanel Grid.ColumnSpan="3" Margin="72,19.2,299.8,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Row="2" >
                 <TextBlock Text="Фамилия:"  />
-                <TextBox MaxLength="15" MinLines="1" x:Name="txt_sname" Height="20" Width="200" HorizontalAlignment="Left" KeyDown="txt_sname_KeyDown" />
+                <TextBox MaxLength="15" MinLines="1" x:Name="txt_sname" Height="20" Width="200" HorizontalAlignment="Left"  />
                 <TextBlock Text="Имя:"/>
                 <TextBox x:Name="txt_name" Height="20" Width="200" HorizontalAlignment="Left" />
                 <TextBlock Text="Отчество (при наличии):"/>

@@ -28,11 +28,17 @@ namespace kursach_01_01.pages
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-
-            notes_class notes = new notes_class(txt_name.Text, txt_text.Text, date.DisplayDate);
-            DataBaseMethods.AddSNotes(notes);
-
-            MessageBox.Show($"Запись:\n {txt_name.Text} добавлена", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (string.IsNullOrEmpty(txt_name.Text) || string.IsNullOrEmpty(txt_text.Text))//проверка на пустное поле
+            {
+                MessageBox.Show("Заполните поля!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+             notes_class notes = new notes_class(txt_name.Text, txt_text.Text, date.DisplayDate);
+             DataBaseMethods.AddSNotes(notes); 
+              MessageBox.Show($"Запись:\n {txt_name.Text} добавлена", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+           
         }
 
         private void back_Click(object sender, RoutedEventArgs e)

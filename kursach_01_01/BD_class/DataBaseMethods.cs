@@ -60,12 +60,12 @@ namespace kursach_01_01.BD_class
             collection.InsertOne(students_);
         }
 
-        public static async void RemoveStudentToDatabase(string surname)
+        public static async void RemoveStudentToDatabase(ObjectId id)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("guide");
             var collection = database.GetCollection<students_class>("Students");
-           var result = await collection.DeleteOneAsync(s => s.Surname == surname);
+           var result = await collection.DeleteOneAsync(s => s._id == id);
 
         }
 

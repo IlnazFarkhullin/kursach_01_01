@@ -50,12 +50,12 @@ namespace kursach_01_01.pages
             NavigationService.Navigate(new regestration_page());
         }
 
-        private void delete_Click(object sender, RoutedEventArgs e)
+        private void delete_Click(object sender, RoutedEventArgs e) //Удаление студента
         {
             var a = std.SelectedItem as students_class;
-            
-           DataBaseMethods.RemoveStudentToDatabase(a.Surname);
-            std.ItemsSource = DataBaseMethods.ShowStudents();
+           DataBaseMethods.RemoveStudentToDatabase(a._id);
+          MessageBox.Show("Запись удалена", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
+          
         }
 
         private void sort_az_Click(object sender, RoutedEventArgs e)
@@ -63,12 +63,12 @@ namespace kursach_01_01.pages
             std.ItemsSource = DataBaseMethods.ShowStudents().ToList().OrderBy(z => z.Surname);//Сортировка по алфавиту от А до Я
         }
 
-        private void edit_Click(object sender, RoutedEventArgs e)
-        {
-            var datastud = std.SelectedItem as students_class;
-           // DataBaseMethods.EditStudent(datastud.Surname, datastud.Name, datastud.Lname, datastud.email, datastud.Phone, datastud.Registration, txt_surname.Text, txt_name.Text, txt_lname.Text, email.Text, phone_number.Text, regis.Text);
-            MessageBox.Show("Изменения сохранены");
+        //private void edit_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var datastud = std.SelectedItem as students_class;
+        //   // DataBaseMethods.EditStudent(datastud.Surname, datastud.Name, datastud.Lname, datastud.email, datastud.Phone, datastud.Registration, txt_surname.Text, txt_name.Text, txt_lname.Text, email.Text, phone_number.Text, regis.Text);
+        //    MessageBox.Show("Изменения сохранены", "Сохранение изменений", MessageBoxButton.OK, MessageBoxImage.Information);
 
-        }
+        //}
     }
 }

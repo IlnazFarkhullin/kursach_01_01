@@ -45,8 +45,6 @@ namespace kursach_01_01.pages
             var datastud = ((sender as ListView).SelectedItem as students_class);
             DataBaseMethods.EditStudent(datastud.Surname, datastud.Name, datastud.Lname, datastud.email, datastud.Phone, datastud.Registration, txt_surname.Text, txt_name.Text, txt_lname.Text, email.Text, phone_number.Text, regis.Text);
             MessageBox.Show("Изменения сохранены");
-
-
         }
     }
 }
