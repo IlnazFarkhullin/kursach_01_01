@@ -26,7 +26,7 @@ namespace kursach_01_01.pages
             InitializeComponent();
         }
 
-        private void add_Click(object sender, RoutedEventArgs e)
+        private void add_Click(object sender, RoutedEventArgs e)// добавление новой записи
         {
             if (string.IsNullOrEmpty(txt_name.Text) || string.IsNullOrEmpty(txt_text.Text))//проверка на пустное поле
             {
@@ -41,7 +41,7 @@ namespace kursach_01_01.pages
            
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
+        private void back_Click(object sender, RoutedEventArgs e)// кнопка вернуться назад
         {
             NavigationService.Navigate(new notes_page());
         }

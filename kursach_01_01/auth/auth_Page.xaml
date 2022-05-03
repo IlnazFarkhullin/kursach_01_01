@@ -24,7 +24,7 @@
         </Grid.RowDefinitions>
         <Image Source="/ico/pop.png" Grid.ColumnSpan="3" Margin="267,0,266,1"/>
 
-        <StackPanel Grid.Row="1" Margin="267,21,266,19.8" Grid.ColumnSpan="3">
+        <StackPanel Grid.Row="1" Margin="267,21,266,112.6" Grid.ColumnSpan="3" Grid.RowSpan="2">
 
 
             <TextBlock FontSize="13" FontFamily="Segoe UI Light" HorizontalAlignment="Center">

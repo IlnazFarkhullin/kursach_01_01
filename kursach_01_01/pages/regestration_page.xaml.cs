@@ -30,7 +30,7 @@ using MongoDB.Driver;
         }
 
 
-        private void adddd_Click(object sender, RoutedEventArgs e)
+        private void adddd_Click(object sender, RoutedEventArgs e) // добавление студента
         {
             if (string.IsNullOrEmpty(txt_name.Text) || string.IsNullOrEmpty(txt_sname.Text)) //проверка на пустое значение
             {
@@ -48,7 +48,7 @@ using MongoDB.Driver;
 
       
 
-        private void back_Click(object sender, RoutedEventArgs e)
+        private void back_Click(object sender, RoutedEventArgs e)// кнопка вернуться назад
         {
             NavigationService.Navigate(new students_page());
         }

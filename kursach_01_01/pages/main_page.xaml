@@ -50,6 +50,12 @@
                             </TextBlock>
                         </StackPanel>
                     </ListViewItem>
+                    <ListViewItem x:Name="exit" Selected="exit_Selected" Height="30" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/ico/Exit.png" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock Margin="10,0,0,0" Text="Выход" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
                 </ListView>
             </StackPanel>
             

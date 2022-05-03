@@ -31,10 +31,6 @@
                 <Button HorizontalAlignment="Right" Margin="0" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="sort_az" Click="sort_az_Click">
                     <Image Source="/ico/sort_az.png"/>
                 </Button>
-                <Button HorizontalAlignment="Right" Margin="0" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="edit" Click="edit_Click">
-                    <Image Source="/ico/pencil.png"/>
-                </Button>
-                
             </StackPanel>
             <StackPanel>
                 <ListView   x:Name="std" SelectionChanged="std_SelectionChanged" >

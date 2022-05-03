@@ -277,6 +277,7 @@
     <Resource Include="ico\Delete.png" />
     <Resource Include="ico\sort_az.png" />
     <Resource Include="ico\save.png" />
+    <Resource Include="ico\Exit.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup />

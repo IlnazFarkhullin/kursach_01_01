@@ -64,5 +64,10 @@ namespace kursach_01_01.pages
         {
             page.Navigate(new timetable_page()); // открытие на Frame page страницы timetable_page
         }
+
+        private void exit_Selected(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new auth.auth_Page());
+        }
     }
 }

@@ -9,8 +9,9 @@
             <Setter Property="Width" Value="120"></Setter>
             <Setter Property="Height" Value="30"></Setter>
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
-            <Setter Property="Background"  Value="Bisque"></Setter>
-            
+            <Setter Property="Background"  Value="Moccasin"></Setter>
+            <Setter Property="BorderBrush" Value="Black" />
+
         </Style>
 
         <!--<Style TargetType="Border">
