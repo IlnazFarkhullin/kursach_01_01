@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using kursach_01_01.BD_class;
 
 namespace kursach_01_01.pages
 {
@@ -23,6 +26,7 @@ namespace kursach_01_01.pages
         public my_page()
         {
             InitializeComponent();
+           
         }
 
         

@@ -11,20 +11,30 @@
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="41.6"/>
-            <RowDefinition Height="26*" />
-            <RowDefinition Height="25*"/>
+            <RowDefinition Height="41*" />
+            <RowDefinition Height="27*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Row="0"  x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" Grid.ColumnSpan="3" Margin="0,0,10,0" >
+        <Grid Grid.Row="0"  x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" Grid.ColumnSpan="2" Margin="0,0,10,0" >
             <TextBlock Text="Моя страница" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
         </Grid>
-        <StackPanel Grid.Row="1" Grid.Column="0">
-            
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="113,12.4,89,22" Width="198" Height="212">
+            <TextBlock Text="Фамилия:" FontSize="15"/>
+            <TextBlock Margin="0,0,0,10" x:Name="Surname" Text="Фархуллин" FontSize="20" FontFamily="Georgia"/>
+            <TextBlock Text="Имя:" FontSize="15"/>
+            <TextBlock Margin="0,0,0,10" Text="Ильназ" FontSize="20" FontFamily="Georgia"/>
+            <TextBlock Text="Отчество:"  FontSize="15"/>
+            <TextBlock Margin="0,0,0,10" Text="Алмазович" FontSize="20" FontFamily="Georgia"/>
+            <TextBlock Text="Должность:"/>
+            <TextBlock Text="Староста"  FontSize="20" FontFamily="Georgia"/>
+
 
         </StackPanel>
+        <Image Grid.Column="1" Grid.Row="1" Source="/ico/ii.png" Margin="0,0.4,0,0"/>
+
+
     </Grid>
 </Page>

@@ -49,5 +49,10 @@ namespace kursach_01_01.auth
                 MessageBox.Show($"Логин и пароль не верный!", "Вход в личный кабинет", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
+
+        private void Close_Click(object sender, RoutedEventArgs e) //закрытие приложения
+        {
+            Application.Current.MainWindow.Close();
+        }
     }
 }

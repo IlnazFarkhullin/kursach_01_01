@@ -29,13 +29,11 @@ namespace kursach_01_01.pages
         public main_page()
         {
             InitializeComponent();
+            page.NavigationService.Navigate(new my_page());
             
         }
 
-        private void DragMove()
-        {
-            throw new NotImplementedException();
-        }
+   
 
         private void my_page_Selected(object sender, RoutedEventArgs e)
         {

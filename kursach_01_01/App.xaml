@@ -14,8 +14,14 @@
 
         </Style>
 
-        <!--<Style TargetType="Border">
-            <Setter  Property="CornerRadius" Value="5"/>
-        </Style>-->
+        <Style TargetType="TextBlock">
+            <Setter  Property="FontFamily" Value="Georgia "/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter  Property="FontFamily" Value="times new roman "/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
     </Application.Resources>
 </Application>

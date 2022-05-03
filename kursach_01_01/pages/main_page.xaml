@@ -17,7 +17,7 @@
             <StackPanel>
                 
                  
-                <ListView  ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="12" Foreground="White" BorderBrush="Transparent" Background="Transparent">
+                <ListView   ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="12" Foreground="White" BorderBrush="Transparent" Background="Transparent">
                     <ListViewItem Selected="my_page_Selected" x:Name="my_page" Height="30">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/ico/imy_page.png" Height="25" VerticalAlignment="Center"/>
