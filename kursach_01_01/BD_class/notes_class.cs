@@ -15,7 +15,7 @@ namespace kursach_01_01.BD_class
         [BsonIgnoreIfDefault]
         public ObjectId _id;
 
-        public notes_class(string name_notes, string text,  DateTime date)
+        public notes_class( string name_notes, string text, DateTime date)
         {
             Name_notes = name_notes;
             Text = text;

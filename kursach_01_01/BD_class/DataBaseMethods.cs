@@ -60,12 +60,12 @@ namespace kursach_01_01.BD_class
             collection.InsertOne(students_);
         }
 
-        public static void RemoveStudentToDatabase(students_class students_)
+        public static async void RemoveStudentToDatabase(string surname)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("guide");
             var collection = database.GetCollection<students_class>("Students");
-            collection.DeleteOne(s => s.Surname == "surname");
+           var result = await collection.DeleteOneAsync(s => s.Surname == surname);
 
         }
 
@@ -75,6 +75,25 @@ namespace kursach_01_01.BD_class
             var datbase = notes.GetDatabase("guide");
             var collection = datbase.GetCollection<notes_class>("Notes");
             return collection.Find(x => true).ToList();
+        }
+
+        public static async  void RemoveNotes(string name)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("guide");
+            var collection = database.GetCollection<notes_class>("Notes");
+            var result = await collection.DeleteOneAsync(z => z.Name_notes == name);
+        }
+
+        public static void EditNotes(string Text, string NewText)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("guide");
+            var collection = database.GetCollection<notes_class>("Notes");
+
+            var filterText = Builders<notes_class>.Filter.Eq("Text", Text);
+            var updateText = Builders<notes_class>.Update.Set(x => x.Text, NewText );
+            collection.UpdateOne(filterText, updateText);
         }
         public static void AddSNotes(notes_class nots_)
         {

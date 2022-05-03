@@ -23,7 +23,7 @@
 
         <StackPanel Grid.ColumnSpan="1" Margin="72,19.2,299.8,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Row="2" >
             <TextBlock Text="Название:"  />
-            <TextBox x:Name="txt_name" Height="20" Width="200" HorizontalAlignment="Left" />
+            <TextBox  Margin="0,0,0,10" x:Name="txt_name" Height="20" Width="200" HorizontalAlignment="Left" />
             <DatePicker x:Name="date" Height="30" Width="200" HorizontalAlignment="Left"></DatePicker>
             <TextBlock Text="Текст:"/>
             <TextBox x:Name="txt_text" Height="105" Width="370" HorizontalAlignment="Left" />

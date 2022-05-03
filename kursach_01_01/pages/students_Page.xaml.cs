@@ -54,7 +54,8 @@ namespace kursach_01_01.pages
         {
             var a = std.SelectedItem as students_class;
             
-           DataBaseMethods.RemoveStudentToDatabase(a);
+           DataBaseMethods.RemoveStudentToDatabase(a.Surname);
+            std.ItemsSource = DataBaseMethods.ShowStudents();
         }
 
         private void sort_az_Click(object sender, RoutedEventArgs e)

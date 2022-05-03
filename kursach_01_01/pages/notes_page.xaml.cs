@@ -38,9 +38,29 @@ namespace kursach_01_01.pages
             text.Text = datastud.Text;
         }
 
-        private void add_notes_Click(object sender, RoutedEventArgs e)
+        private void add_notes_Click(object sender, RoutedEventArgs e) // добавление
         {
             NavigationService.Navigate(new add_notes());
+        }
+
+        private void delete_Click(object sender, RoutedEventArgs e) // удаление
+        {
+            var z = not.SelectedItem as notes_class;
+            if (z != null)
+            {
+             DataBaseMethods.RemoveNotes(z.Name_notes);
+            }
+            else
+            {
+                MessageBox.Show("Выберите запись");
+            }
+           
+        }
+
+        private void edit_Click(object sender, RoutedEventArgs e)// редактирование
+        {
+            var z = ((sender as ListView).SelectedItem as notes_class);
+            DataBaseMethods.EditNotes( z.Text,text.Text);
         }
     }
 }

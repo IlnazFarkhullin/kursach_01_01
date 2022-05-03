@@ -147,7 +147,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BD_class\authorization.cs" />
-    <Compile Include="BD_class\CurrentStud.cs" />
     <Compile Include="BD_class\DataBaseMethods.cs" />
     <Compile Include="BD_class\notes_class.cs" />
     <Compile Include="BD_class\students_class.cs" />

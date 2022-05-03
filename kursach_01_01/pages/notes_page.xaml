@@ -19,10 +19,19 @@
             
         </Grid>
         
-        <StackPanel Grid.Row="1">
-            <Button HorizontalAlignment="Left" Margin="0" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="add_notes" Click="add_notes_Click">
+        <StackPanel Grid.Row="1" VerticalAlignment="Top">
+            <StackPanel Margin="0,0,0,10" VerticalAlignment="Top" Orientation="Horizontal">
+                <Button HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,20" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="add_notes" Click="add_notes_Click">
                 <Image Source="/ico/ADD.png"/>
             </Button>
+            <Button HorizontalAlignment="Left" Margin="0,0,0,20" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="delete" Click="delete_Click">
+                <Image Source="/ico/Delete.png"/>
+            </Button>
+                <Button HorizontalAlignment="Right" Margin="0,0,0,20" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="edit" Click="edit_Click">
+                    <Image Source="/ico/pencil.png"/>
+                </Button>
+            </StackPanel>
+            
             <ListView   SelectionChanged="not_SelectionChanged"  x:Name="not"    Margin="0,0,584,0">
                 <ListView.View>
                     <GridView>
