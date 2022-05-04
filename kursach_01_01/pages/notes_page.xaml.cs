@@ -28,14 +28,29 @@ namespace kursach_01_01.pages
             InitializeComponent();
             //name.Text = datastud.Name_notes;
             //text.Text = datastud.Text;
-            not.ItemsSource = DataBaseMethods.ShowNotes().ToList(); 
+            not.ItemsSource = DataBaseMethods.ShowNotes().ToList();
         }
 
+
+        //public void Refresh()
+        //{
+        //    not.ItemsSource = DataBaseMethods.ShowStudents();
+        //}
         private void not_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var datastud = ((sender as ListView).SelectedItem as notes_class);
-            name.Text = datastud.Name_notes;
-            text.Text = datastud.Text;
+            if (not.SelectedIndex == -1)
+                return;
+            else
+            {
+                name.Text = ((notes_class)not.SelectedItem).Name_notes;
+                text.Text = ((notes_class)not.SelectedItem).Text;
+            }
+          /*  var datastud = not.SelectedItem as notes_class;*/   //((sender as ListView).SelectedItem as notes_class);
+           
+            //name.Text = datastud.Name_notes;
+            //text.Text = datastud.Text;
+            
+
         }
 
         private void add_notes_Click(object sender, RoutedEventArgs e) // добавление
@@ -45,22 +60,35 @@ namespace kursach_01_01.pages
 
         private void delete_Click(object sender, RoutedEventArgs e) // удаление
         {
+            
             var z = not.SelectedItem as notes_class;
             if (z != null)
             {
-             DataBaseMethods.RemoveNotes(z.Name_notes);
+                DataBaseMethods.RemoveNotes(z._id);
+                not.ItemsSource = null;
+                not.ItemsSource = DataBaseMethods.ShowNotes().ToList();
+                name.Text = null;
+                text.Text = null;
             }
             else
             {
                 MessageBox.Show("Выберите запись");
             }
-           
+            
+            
         }
+       
 
         private void edit_Click(object sender, RoutedEventArgs e)// редактирование
         {
             var z = ((sender as ListView).SelectedItem as notes_class);
             DataBaseMethods.EditNotes( z.Text,text.Text);
+        }
+
+        private void refresh_Click(object sender, RoutedEventArgs e)
+        {
+            not.ItemsSource = DataBaseMethods.ShowNotes();
+            //not.SelectedItem = DataBaseMethods.ShowStudents()
         }
     }
 }

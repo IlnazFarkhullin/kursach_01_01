@@ -28,10 +28,14 @@ namespace kursach_01_01.pages
                                                              //ShowStudents(); - это метод из класса DataBaseMethods. Этот метод выводит студентов
         }
 
+        public void Refresh()
+        {
+            std.ItemsSource = DataBaseMethods.ShowStudents();
+            
+        }
         private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var datastud = ((sender as ListView).SelectedItem as students_class);// передача данных на другую форму
-            
             stud_info _Info = new stud_info(datastud);// передача данных на другую форму
             _Info.Show();// открытие окна при нажатии на элемент ListView
             
@@ -55,6 +59,7 @@ namespace kursach_01_01.pages
             var a = std.SelectedItem as students_class;
            DataBaseMethods.RemoveStudentToDatabase(a._id);
           MessageBox.Show("Запись удалена", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
+           Refresh();
           
         }
 

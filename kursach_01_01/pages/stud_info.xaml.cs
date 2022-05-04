@@ -21,29 +21,18 @@ namespace kursach_01_01.pages
     /// </summary>
     public partial class stud_info : Window
     {
-       
+        students_class postStudent;
         public stud_info(students_class datastud)//приём данных из одной формы на данную форму
         {
             InitializeComponent();
-            // поля которые принемают данные
-            txt_surname.Text = datastud.Surname;
-            txt_name.Text = datastud.Name;
-            txt_lname.Text = datastud.Lname;
-            birthday.Text = datastud.Birth_date;
-            phone_number.Text = datastud.Phone;
-            Medical_policy.Text = datastud.Medical_policy;
-            INN.Text = datastud.INN;
-            series.Text = datastud.Series;
-            number.Text = datastud.Number;
-            regis.Text = datastud.Registration;
-            email.Text = datastud.email;
+            postStudent = datastud;
+            this.DataContext = postStudent;
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
             //var selectedStudent = dann.SelectedItem as students_class;
-            var datastud = ((sender as ListView).SelectedItem as students_class);
-            DataBaseMethods.EditStudent(datastud.Surname, datastud.Name, datastud.Lname, datastud.email, datastud.Phone, datastud.Registration, txt_surname.Text, txt_name.Text, txt_lname.Text, email.Text, phone_number.Text, regis.Text);
+            DataBaseMethods.EditStudent(postStudent.Surname, postStudent.Name, postStudent.Lname, postStudent.email, postStudent.Phone, postStudent.Registration, txt_surname.Text, txt_name.Text, txt_lname.Text, email.Text, phone_number.Text, regis.Text);
             MessageBox.Show("Изменения сохранены");
         }
     }

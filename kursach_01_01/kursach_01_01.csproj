@@ -279,6 +279,7 @@
     <Resource Include="ico\save.png" />
     <Resource Include="ico\Exit.png" />
     <Resource Include="ico\ii.png" />
+    <Resource Include="ico\refresh.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup />

@@ -77,12 +77,12 @@ namespace kursach_01_01.BD_class
             return collection.Find(x => true).ToList();
         }
 
-        public static async  void RemoveNotes(string name)
+        public static async  void RemoveNotes(ObjectId id)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("guide");
             var collection = database.GetCollection<notes_class>("Notes");
-            var result = await collection.DeleteOneAsync(z => z.Name_notes == name);
+            var result = await collection.DeleteOneAsync(z => z._id == id);
         }
 
         public static void EditNotes(string Text, string NewText)
@@ -112,7 +112,14 @@ namespace kursach_01_01.BD_class
             var collection = database.GetCollection<authorization>("auth");
             return collection.Find(x => true).ToList();
         }
-
+        public static notes_class GetisNote(string name)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("guide");
+            var collection = database.GetCollection<notes_class>("Notes");
+            var founded = collection.Find(n => n.Name_notes == name).FirstOrDefault();
+            return founded;
+        }
        
        
     }

@@ -27,31 +27,31 @@
 
         <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Height="344"  Margin="80,20,91.2,12" Width="190">
             <TextBlock Text="Фамиля:" />
-            <TextBox x:Name="txt_surname" Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBox Text="{Binding Surname}" x:Name="txt_surname" Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Имя:"/>
-            <TextBox x:Name="txt_name"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBox Text="{Binding Name}" x:Name="txt_name"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Отчество:"/>
-            <TextBox x:Name="txt_lname"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBox Text="{Binding Lname}"  x:Name="txt_lname"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Дата рождения:"/>
-            <TextBlock x:Name="birthday"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"></TextBlock>
-            <TextBlock Text="Номер телефона:"/>
-            <TextBox x:Name="phone_number"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBlock Text="{Binding Birth_date}"  x:Name="birthday"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"></TextBlock>
+            <TextBlock  Text="Номер телефона:"/>
+            <TextBox Text="{Binding Phone}"  x:Name="phone_number"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Номер медецинского полиса:"/>
-            <TextBox x:Name="Medical_policy"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBox Text="{Binding Medical_policy}"  x:Name="Medical_policy"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="ИНН:"/>
-            <TextBox x:Name="INN"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBox Text="{Binding INN}"  x:Name="INN"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="e-mail:"/>
-            <TextBox x:Name="email"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBox Text="{Binding email}" x:Name="email"  Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
 
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="9.8,111,2.8,109" Height="156" >
             <TextBlock Text="Паспортные данные" HorizontalAlignment="Center"/>
             <TextBlock Text="Номер серии:"/>
-            <TextBox x:Name="series"/>
+            <TextBox Text="{Binding Series}"  x:Name="series"/>
             <TextBlock Text="Код пасрота:"/>
-            <TextBox x:Name="number"/>
+            <TextBox Text="{Binding Number}"  x:Name="number"/>
             <TextBlock Text="Регистрация:"/>
-            <TextBox x:Name="regis"/>
+            <TextBox Text="{Binding Registration}" x:Name="regis"/>
         </StackPanel>
     </Grid>
 </Window>
