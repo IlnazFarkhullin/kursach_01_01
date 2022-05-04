@@ -32,10 +32,7 @@ namespace kursach_01_01.pages
         }
 
 
-        //public void Refresh()
-        //{
-        //    not.ItemsSource = DataBaseMethods.ShowStudents();
-        //}
+    
         private void not_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (not.SelectedIndex == -1)
@@ -45,12 +42,7 @@ namespace kursach_01_01.pages
                 name.Text = ((notes_class)not.SelectedItem).Name_notes;
                 text.Text = ((notes_class)not.SelectedItem).Text;
             }
-          /*  var datastud = not.SelectedItem as notes_class;*/   //((sender as ListView).SelectedItem as notes_class);
-           
-            //name.Text = datastud.Name_notes;
-            //text.Text = datastud.Text;
-            
-
+         
         }
 
         private void add_notes_Click(object sender, RoutedEventArgs e) // добавление

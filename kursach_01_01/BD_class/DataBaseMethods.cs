@@ -25,20 +25,22 @@ namespace kursach_01_01.BD_class
             var database = stud.GetDatabase("guide");
             var collection = database.GetCollection<students_class>("Students");
 
+            var filterSurname = Builders<students_class>.Filter.Eq("Surname", Surname);
+            var updateSurname = Builders<students_class>.Update.Set(x => x.Surname, NewSurname);
+
             var filterName = Builders<students_class>.Filter.Eq("Name", Name);
             var updateName = Builders<students_class>.Update.Set(x => x.Name, NewName);
 
-            var filterSurname = Builders<students_class>.Filter.Eq("Surname", Surname);
-            var updateSurname = Builders<students_class>.Update.Set(x => x.Surname, NewSurname);
 
             var filterLname = Builders<students_class>.Filter.Eq("Lname", Lname);
             var updateLname = Builders<students_class>.Update.Set(x => x.Lname, newLname);
 
+            var filterEmail = Builders<students_class>.Filter.Eq("email", email);
+            var updateEmail = Builders<students_class>.Update.Set(x => x.email, NewEmail);
+
             var filterPhone = Builders<students_class>.Filter.Eq("Phone", Phone);
             var updatePhone = Builders<students_class>.Update.Set(x => x.Phone, NewPhone);
 
-            var filterEmail = Builders<students_class>.Filter.Eq("email", email);
-            var updateEmail = Builders<students_class>.Update.Set(x => x.email, NewEmail);
 
             var filterRegistration = Builders<students_class>.Filter.Eq("Registrstion", Registration);
             var updateRegistration = Builders<students_class>.Update.Set(x => x.Registration, Registration);
