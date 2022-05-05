@@ -26,6 +26,7 @@ namespace kursach_01_01.pages
         public my_page()
         {
             InitializeComponent();
+            
            
         }
 

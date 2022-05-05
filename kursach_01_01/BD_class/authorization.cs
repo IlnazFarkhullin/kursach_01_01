@@ -26,5 +26,6 @@ namespace kursach_01_01.BD_class
         public string  login { get; set; }
         public string password { get; set; }
         public string name { get; set; }
+        
     }
 }

@@ -28,10 +28,14 @@ namespace kursach_01_01.pages
                                                              //ShowStudents(); - это метод из класса DataBaseMethods. Этот метод выводит студентов
         }
 
+        public void Refresh()
+        {
+            std.ItemsSource = DataBaseMethods.ShowStudents();
+            
+        }
         private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var datastud = ((sender as ListView).SelectedItem as students_class);// передача данных на другую форму
-            
             stud_info _Info = new stud_info(datastud);// передача данных на другую форму
             _Info.Show();// открытие окна при нажатии на элемент ListView
             
@@ -52,10 +56,24 @@ namespace kursach_01_01.pages
 
         private void delete_Click(object sender, RoutedEventArgs e) //Удаление студента
         {
-            var a = std.SelectedItem as students_class;
-           DataBaseMethods.RemoveStudentToDatabase(a._id);
-          MessageBox.Show("Запись удалена", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
-          
+            //  var a = std.SelectedItem as students_class;
+            // DataBaseMethods.RemoveStudentToDatabase(a._id);
+            // MessageBox.Show("Запись удалена", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            var z = std.SelectedItem as students_class;
+            if (z != null)
+            {
+                DataBaseMethods.RemoveStudentToDatabase(z._id);
+                std.ItemsSource = null;
+                std.ItemsSource = DataBaseMethods.ShowStudents().ToList();
+                //name.Text = null;
+                //text.Text = null;
+            }
+            else
+            {
+                MessageBox.Show("Выберите запись");
+            }
+
         }
 
         private void sort_az_Click(object sender, RoutedEventArgs e)
@@ -63,12 +81,6 @@ namespace kursach_01_01.pages
             std.ItemsSource = DataBaseMethods.ShowStudents().ToList().OrderBy(z => z.Surname);//Сортировка по алфавиту от А до Я
         }
 
-        //private void edit_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var datastud = std.SelectedItem as students_class;
-        //   // DataBaseMethods.EditStudent(datastud.Surname, datastud.Name, datastud.Lname, datastud.email, datastud.Phone, datastud.Registration, txt_surname.Text, txt_name.Text, txt_lname.Text, email.Text, phone_number.Text, regis.Text);
-        //    MessageBox.Show("Изменения сохранены", "Сохранение изменений", MessageBoxButton.OK, MessageBoxImage.Information);
-
-        //}
+        
     }
 }

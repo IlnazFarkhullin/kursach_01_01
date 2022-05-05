@@ -23,12 +23,15 @@ namespace kursach_01_01.pages
     /// </summary>
     public partial class notes_page : Page
     {
+        notes_class postnotes;
         public notes_page()
         {
             InitializeComponent();
             //name.Text = datastud.Name_notes;
             //text.Text = datastud.Text;
             not.ItemsSource = DataBaseMethods.ShowNotes().ToList();
+           
+            this.DataContext = postnotes;
         }
 
 
@@ -73,14 +76,11 @@ namespace kursach_01_01.pages
 
         private void edit_Click(object sender, RoutedEventArgs e)// редактирование
         {
-            var z = ((sender as ListView).SelectedItem as notes_class);
-            DataBaseMethods.EditNotes( z.Text,text.Text);
+            DataBaseMethods.EditNotes(postnotes.Text , text.Text);
+            MessageBox.Show("Edit");
+            
         }
 
-        private void refresh_Click(object sender, RoutedEventArgs e)
-        {
-            not.ItemsSource = DataBaseMethods.ShowNotes();
-            //not.SelectedItem = DataBaseMethods.ShowStudents()
-        }
+       
     }
 }

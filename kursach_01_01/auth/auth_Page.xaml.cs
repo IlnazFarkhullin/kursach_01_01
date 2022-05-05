@@ -40,7 +40,7 @@ namespace kursach_01_01.auth
                 //var b = a.name.FirstOrDefault();
                 if (a.name == "Ильназ Алмазович")
                 {
-                    MessageBox.Show($"Добро пожаловать {a.name}" ,"Вход в личные кабинет", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show($"Добро пожаловать  {a.name}" ,"Вход в личные кабинет", MessageBoxButton.OK, MessageBoxImage.Information);
                     NavigationService.Navigate(new main_page());
                 }
             }

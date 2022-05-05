@@ -36,10 +36,12 @@
                             <TextBlock Margin="10,0,0,0" Text="Заметки" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="schedule" Selected="schedule_Selected" Height="30" >
+                    <ListViewItem x:Name="schedule"  Height="30" >
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/ico/raspisanie.png" Height="25" VerticalAlignment="Center"/>
-                            <TextBlock Margin="10,0,0,0" Text="Расписание" VerticalAlignment="Center"/>
+                            <TextBlock Margin="10,0,0,0"  VerticalAlignment="Center">
+                                <Hyperlink Foreground="White" x:Name="timetable" Click="timetable_Click">Расписание</Hyperlink>
+                            </TextBlock>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="Evaluation" Height="30" >

@@ -30,9 +30,6 @@
                 <Button HorizontalAlignment="Right" Margin="0,0,0,20" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="edit" Click="edit_Click">
                     <Image Source="/ico/pencil.png"/>
                 </Button>
-                <Button HorizontalAlignment="Left" Margin="0,0,0,20" Background="White" Foreground="Aqua" FontSize="18" Width="29"  Height="29" x:Name="refresh" Click="refresh_Click">
-                    <Image Source="/ico/refresh.png"/>
-                </Button>
             </StackPanel>
             
             <ListView   SelectionChanged="not_SelectionChanged"  x:Name="not"    Margin="0,0,584,0">

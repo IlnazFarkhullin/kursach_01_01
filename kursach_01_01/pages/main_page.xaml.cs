@@ -58,14 +58,16 @@ namespace kursach_01_01.pages
             page.Navigate(new notes_page()); // открытие на Frame page страницы notes_page
         }
 
-        private void schedule_Selected(object sender, RoutedEventArgs e)
-        {
-            page.Navigate(new timetable_page()); // открытие на Frame page страницы timetable_page
-        }
+       
 
         private void exit_Selected(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new auth.auth_Page());
+        }
+
+        private void timetable_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://docs.google.com/spreadsheets/d/1kQxBMF9mOxY4Ct82Wz1BWZ1FdxegJb_h/edit#gid=122381148");
         }
     }
 }
