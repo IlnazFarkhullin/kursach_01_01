@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:kursach_01_01.pages"
         mc:Ignorable="d"
         Icon="/ico/std.png"
-        Title="{Binding Surname}" Height="450" Width="800">
+        Title="{Binding Surname}" Height="550" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="11*"/>
@@ -51,7 +51,7 @@
             <TextBlock Text="Код пасрота:"/>
             <TextBox Text="{Binding Number}"  x:Name="number"/>
             <TextBlock Text="Регистрация:"/>
-            <TextBox Text="{Binding Registration}" x:Name="regis"/>
+            <TextBox  Text="{Binding Registration}" x:Name="regis"/>
         </StackPanel>
     </Grid>
 </Window>

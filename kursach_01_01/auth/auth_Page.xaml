@@ -40,12 +40,12 @@
             <TextBlock  FontSize="13"  HorizontalAlignment="Center">
                <Span  Foreground="White">Введите пароль:</Span>
             </TextBlock>
-            <PasswordBox Width="200" Height="20" BorderBrush="Black" x:Name="txt_password">
-                <PasswordBox.Resources>
-                    <Style  TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="8"/>
-                    </Style>
-                </PasswordBox.Resources>
+            <PasswordBox Width="200" Height="20" Background="White" x:Name="txt_password">
+                <PasswordBox.Template>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border CornerRadius="5" Background="White" BorderBrush="Black" BorderThickness="1"/>
+                    </ControlTemplate>
+                </PasswordBox.Template>
             </PasswordBox>
             <Button Margin="0,7" x:Name="btn_login" Click="btn_login_Click" Content="Войти "  IsDefault="True"/>
 
