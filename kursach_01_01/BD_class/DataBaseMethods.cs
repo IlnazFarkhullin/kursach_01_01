@@ -19,38 +19,38 @@ namespace kursach_01_01.BD_class
             return collection.Find(x => true).ToList(); // возвращение всех данных из коллекции
         }
 
-        public static void EditStudent(string Surname, string Name, string Lname, string Phone,  string email, string Registration, string NewPhone, string NewSurname, string NewName, string newLname, string NewEmail, string newRegistration) 
+        public static void EditStudent(string Surname, string Name, string Lname, string Phone,   string Registration, string NewPhone, string NewSurname, string NewName, string newLname,  string newRegistration) 
         {
             var stud = new MongoClient("mongodb://localhost");
             var database = stud.GetDatabase("guide");
             var collection = database.GetCollection<students_class>("Students");
 
-            var filterSurname = Builders<students_class>.Filter.Eq("Surname", Surname);
+          // var filterSurname = Builders<students_class>.Filter.Eq("Surname", Surname);
             var updateSurname = Builders<students_class>.Update.Set(x => x.Surname, NewSurname);
 
-            var filterName = Builders<students_class>.Filter.Eq("Name", Name);
+         //   var filterName = Builders<students_class>.Filter.Eq("Name", Name);
             var updateName = Builders<students_class>.Update.Set(x => x.Name, NewName);
 
 
-            var filterLname = Builders<students_class>.Filter.Eq("Lname", Lname);
+           // var filterLname = Builders<students_class>.Filter.Eq("Lname", Lname);
             var updateLname = Builders<students_class>.Update.Set(x => x.Lname, newLname);
 
-            var filterEmail = Builders<students_class>.Filter.Eq("email", email);
-            var updateEmail = Builders<students_class>.Update.Set(x => x.email, NewEmail);
+           // var filterEmail = Builders<students_class>.Filter.Eq("email", email);
+           // var updateEmail = Builders<students_class>.Update.Set(x => x.email, NewEmail);
 
-            var filterPhone = Builders<students_class>.Filter.Eq("Phone", Phone);
+           // var filterPhone = Builders<students_class>.Filter.Eq("Phone", Phone);
             var updatePhone = Builders<students_class>.Update.Set(x => x.Phone, NewPhone);
 
 
-            var filterRegistration = Builders<students_class>.Filter.Eq("Registrstion", Registration);
+           // var filterRegistration = Builders<students_class>.Filter.Eq("Registrstion", Registration);
             var updateRegistration = Builders<students_class>.Update.Set(x => x.Registration, Registration);
 
-            collection.UpdateOne(filterSurname , updateSurname);
-            collection.UpdateOne(filterName , updateName);
-            collection.UpdateOne(filterLname , updateLname);
-            collection.UpdateOne(filterPhone , updatePhone);
-            collection.UpdateOne(filterEmail , updateEmail);
-            collection.UpdateOne(filterRegistration, updateRegistration);
+            collection.UpdateOne(s => s.Surname == Surname , updateSurname);
+            collection.UpdateOne(n => n.Name == Name , updateName);
+            collection.UpdateOne(d => d.Lname== Lname , updateLname);
+            collection.UpdateOne(z => z.Phone == Phone , updatePhone);
+            //collection.UpdateOne(v => v.email == email , updateEmail);
+            collection.UpdateOne(o => o.Registration == Registration, updateRegistration);
 
     }
 
@@ -87,16 +87,7 @@ namespace kursach_01_01.BD_class
             var result = await collection.DeleteOneAsync(z => z._id == id);
         }
 
-        public static void EditNotes(string Text, string NewText)
-        {
-            var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("guide");
-            var collection = database.GetCollection<notes_class>("Notes");
-
-            var filterText = Builders<notes_class>.Filter.Eq("Text", Text);
-            var updateText = Builders<notes_class>.Update.Set(x => x.Text, NewText );
-            collection.UpdateOne(filterText, updateText);
-        }
+        
         public static void AddSNotes(notes_class nots_)
         {
             var client = new MongoClient("mongodb://localhost");

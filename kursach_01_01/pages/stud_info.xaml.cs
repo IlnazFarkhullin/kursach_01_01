@@ -32,7 +32,7 @@ namespace kursach_01_01.pages
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
             //var selectedStudent = dann.SelectedItem as students_class;
-            DataBaseMethods.EditStudent(postStudent.Surname, postStudent.Name, postStudent.Lname, postStudent.email, postStudent.Phone, postStudent.Registration, txt_surname.Text, txt_name.Text, txt_lname.Text, email.Text, phone_number.Text, regis.Text);
+            DataBaseMethods.EditStudent(postStudent.Surname, postStudent.Name, postStudent.Lname,  postStudent.Phone, postStudent.Registration, txt_surname.Text, txt_name.Text, txt_lname.Text,  phone_number.Text, regis.Text);
             MessageBox.Show("Изменения сохранены");
         }
     }

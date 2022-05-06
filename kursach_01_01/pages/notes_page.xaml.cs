@@ -31,7 +31,7 @@ namespace kursach_01_01.pages
             //text.Text = datastud.Text;
             not.ItemsSource = DataBaseMethods.ShowNotes().ToList();
            
-            this.DataContext = postnotes;
+            //this.DataContext = postnotes;
         }
 
 
@@ -72,15 +72,7 @@ namespace kursach_01_01.pages
             
             
         }
-       
-
-        private void edit_Click(object sender, RoutedEventArgs e)// редактирование
-        {
-            DataBaseMethods.EditNotes(postnotes.Text , text.Text);
-            MessageBox.Show("Edit");
-            
-        }
-
+      
        
     }
 }
