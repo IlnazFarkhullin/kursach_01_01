@@ -9,13 +9,10 @@
       Title="auth_Page">
 
     <Grid x:Name="autorization" Background="#FF0F4E7A">
-
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition />
             <ColumnDefinition />
-
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="152*"/>
@@ -23,36 +20,17 @@
             <RowDefinition Height="113*"/>
         </Grid.RowDefinitions>
         <Image Source="/ico/pop.png" Grid.ColumnSpan="3" Margin="267,0,266,1"/>
-
         <StackPanel Grid.Row="1" Margin="267,21,266,112.6" Grid.ColumnSpan="3" Grid.RowSpan="2">
-
-
             <TextBlock FontSize="13"  HorizontalAlignment="Center">
                 <Span  Foreground="White">Введите логин:</Span>
             </TextBlock>
-            <TextBox  Margin="0,0,0,7" Height="20" Width="200" BorderBrush="Black"  x:Name="txt_login">
-                <TextBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </TextBox.Resources>
-            </TextBox>
+            <TextBox  Margin="0,0,0,7" Height="20" Width="200" BorderBrush="Black"  x:Name="txt_login"/>
             <TextBlock  FontSize="13"  HorizontalAlignment="Center">
                <Span  Foreground="White">Введите пароль:</Span>
             </TextBlock>
-            <PasswordBox Width="200" Height="20" Background="White" x:Name="txt_password">
-                <PasswordBox.Template>
-                    <ControlTemplate TargetType="PasswordBox">
-                        <Border CornerRadius="5" Background="White" BorderBrush="Black" BorderThickness="1"/>
-                    </ControlTemplate>
-                </PasswordBox.Template>
-            </PasswordBox>
+            <PasswordBox Width="200" Height="20" Foreground="Black" x:Name="txt_password"/>
             <Button Margin="0,7" x:Name="btn_login" Click="btn_login_Click" Content="Войти "  IsDefault="True"/>
-
             <Button  x:Name="Close" Click="Close_Click" Content="Выход"  />
-
-
-
         </StackPanel>
     </Grid>
 </Page>

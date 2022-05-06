@@ -9,28 +9,20 @@
       Title="regestration_page">
 
     <Grid>
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>-->
-
         <Grid Background="Azure" Margin="2,-23,-115,-104">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="199*"/>
                 <ColumnDefinition Width="214.4"/>
                 <ColumnDefinition Width="499*" />
-
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="25"/>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="517"/>
-
             </Grid.RowDefinitions>
             <Grid Grid.Row="1" HorizontalAlignment="Stretch"  x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" Grid.ColumnSpan="3" Margin="0,0,-0.2,0" >
                 <TextBlock Text="Регистрация студента" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
             </Grid>
-
             <StackPanel Grid.ColumnSpan="3" Margin="72,19.2,299.8,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Row="2" >
                 <TextBlock Text="Фамилия:"  />
                 <TextBox MaxLength="15" MinLines="1" x:Name="txt_sname" Height="20" Width="200" HorizontalAlignment="Left"  />
@@ -39,8 +31,7 @@
                 <TextBlock Text="Отчество (при наличии):"/>
                 <TextBox x:Name="txt_lastname" Height="20" Width="200" HorizontalAlignment="Left" />
                 <TextBlock Text="Дата рождения:"/>
-                <DatePicker x:Name="birthday" Height="30" Width="200" HorizontalAlignment="Left"></DatePicker>
-                <!--<TextBox x:Name="txt_spes" Height="20" Width="200" HorizontalAlignment="Left" />-->
+                <DatePicker IsTodayHighlighted="False" x:Name="birthday" Height="30" Width="200" HorizontalAlignment="Left"></DatePicker>
                 <TextBlock Text="Номер телефона"/>
                 <TextBox x:Name="phone" Height="20" Width="200" HorizontalAlignment="Left"/>
                 <TextBlock Text="Медицинский полис"/>
@@ -59,13 +50,6 @@
                 <TextBox x:Name="kod" Height="20" Width="200" HorizontalAlignment="Left"/>
                 <TextBlock Text="Регистрация"/>
                 <TextBox x:Name="reg" Height="20" Width="200" HorizontalAlignment="Left"/>
-            </StackPanel>
-            <StackPanel Margin="0,40.2,0.2,496.6" Grid.RowSpan="2" Grid.Row="1">
-
-                <Button HorizontalAlignment="Left" Background="White" Foreground="Aqua" FontSize="18" Width="50"  Height="29" x:Name="back" Click="back_Click">
-                    <Image Source="/ico/back.png"/>
-                </Button>
-
             </StackPanel>
         </Grid>
     </Grid>

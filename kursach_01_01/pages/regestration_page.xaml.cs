@@ -32,28 +32,20 @@ using MongoDB.Driver;
 
         private void adddd_Click(object sender, RoutedEventArgs e) // добавление студента
         {
-            if (string.IsNullOrEmpty(txt_name.Text) || string.IsNullOrEmpty(txt_sname.Text)) //проверка на пустое значение
+            if (string.IsNullOrEmpty(txt_name.Text) || string.IsNullOrEmpty(txt_sname.Text) || string.IsNullOrEmpty(birthday.Text)) //проверка на пустое значение
             {
-                MessageBox.Show("Запоните поля Имя  и Фамилия !!!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Запоните основные поля Фамилия, Имя и Дата рождения !!!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
-               students_class stud = new students_class(txt_sname.Text, txt_name.Text, txt_lastname.Text, birthday.ToString(), phone.Text,   mail.Text, medic_polic.Text, innn.Text, seriya.Text, kod.Text, reg.Text);
+               students_class stud = new students_class(txt_sname.Text, txt_name.Text, txt_lastname.Text, birthday.Text, phone.Text,   mail.Text, medic_polic.Text, innn.Text, seriya.Text, kod.Text, reg.Text);
                DataBaseMethods.AddStudentToDatabase(stud);
                MessageBox.Show($"Студент:\n {txt_sname.Text} {txt_name.Text} {txt_lastname.Text} зарегестрирован", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
+                NavigationService.Navigate(new students_page());
             }
            
             
         }
-
-      
-
-        private void back_Click(object sender, RoutedEventArgs e)// кнопка вернуться назад
-        {
-            NavigationService.Navigate(new students_page());
-        }
-
-        
         
     }
 }

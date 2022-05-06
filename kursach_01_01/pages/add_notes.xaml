@@ -13,14 +13,9 @@
             <RowDefinition Height="4*"/>
             <RowDefinition Height="41*"/>
         </Grid.RowDefinitions>
-
         <Grid Grid.Row="0"  x:Name="panelHeader" VerticalAlignment="Top" Height="40" Background="#FF0F4E7A" >
             <TextBlock Text="Добавить новую запись" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"/>
-            <Button HorizontalAlignment="Left" Background="White" Foreground="Aqua" FontSize="18" Width="50"  Height="29" x:Name="back" Click="back_Click">
-                <Image Source="/ico/back.png"/>
-            </Button>
         </Grid>
-
         <StackPanel Grid.ColumnSpan="1" Margin="72,19.2,299.8,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Row="2" >
             <TextBlock Text="Название:"  />
             <TextBox SpellCheck.IsEnabled="True" Language="ru-ru"  Margin="0,0,0,10" x:Name="txt_name" Height="20" Width="200" HorizontalAlignment="Left" />

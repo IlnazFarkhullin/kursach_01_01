@@ -16,16 +16,12 @@ using kursach_01_01.BD_class;
 
 namespace kursach_01_01.pages
 {
-    /// <summary>
-    /// Логика взаимодействия для add_notes.xaml
-    /// </summary>
     public partial class add_notes : Page
     {
         public add_notes()
         {
             InitializeComponent();
         }
-
         private void add_Click(object sender, RoutedEventArgs e)// добавление новой записи
         {
             if (string.IsNullOrEmpty(txt_name.Text) || string.IsNullOrEmpty(txt_text.Text))//проверка на пустное поле
@@ -36,14 +32,9 @@ namespace kursach_01_01.pages
             {
              notes_class notes = new notes_class(txt_name.Text, txt_text.Text, date.DisplayDate);
              DataBaseMethods.AddSNotes(notes); 
-              MessageBox.Show($"Запись:\n {txt_name.Text} добавлена", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
+             MessageBox.Show($"Запись:\n {txt_name.Text} добавлена", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
+             NavigationService.Navigate(new notes_page());
             }
-           
-        }
-
-        private void back_Click(object sender, RoutedEventArgs e)// кнопка вернуться назад
-        {
-            NavigationService.Navigate(new notes_page());
         }
     }
 }

@@ -18,24 +18,13 @@ using kursach_01_01.BD_class;
 
 namespace kursach_01_01.pages
 {
-    /// <summary>
-    /// Логика взаимодействия для notes_page.xaml
-    /// </summary>
     public partial class notes_page : Page
     {
-        notes_class postnotes;
         public notes_page()
         {
             InitializeComponent();
-            //name.Text = datastud.Name_notes;
-            //text.Text = datastud.Text;
             not.ItemsSource = DataBaseMethods.ShowNotes().ToList();
-           
-            //this.DataContext = postnotes;
         }
-
-
-    
         private void not_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (not.SelectedIndex == -1)
@@ -45,14 +34,11 @@ namespace kursach_01_01.pages
                 name.Text = ((notes_class)not.SelectedItem).Name_notes;
                 text.Text = ((notes_class)not.SelectedItem).Text;
             }
-         
         }
-
         private void add_notes_Click(object sender, RoutedEventArgs e) // добавление
         {
             NavigationService.Navigate(new add_notes());
         }
-
         private void delete_Click(object sender, RoutedEventArgs e) // удаление
         {
             
@@ -69,10 +55,6 @@ namespace kursach_01_01.pages
             {
                 MessageBox.Show("Выберите запись");
             }
-            
-            
         }
-      
-       
     }
 }

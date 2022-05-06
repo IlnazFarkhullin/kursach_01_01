@@ -6,17 +6,12 @@
       xmlns:local="clr-namespace:kursach_01_01.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="1300"
-      Title="main_page"
-      >
+      Title="main_page">
 
     <Grid>
-        <Grid x:Name="pahel_header" VerticalAlignment="Top" Height="50">
-            
-        </Grid>
+        <Grid x:Name="pahel_header" VerticalAlignment="Top" Height="50"/>
         <Grid x:Name="sidePanel" Background="#FF0F4E7A" HorizontalAlignment="Left" Width="150">
             <StackPanel>
-                
-                 
                 <ListView   ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontFamily="Century Gothic" FontSize="12" Foreground="White" BorderBrush="Transparent" Background="Transparent">
                     <ListViewItem Selected="my_page_Selected" x:Name="my_page" Height="30">
                         <StackPanel Orientation="Horizontal">
@@ -60,9 +55,7 @@
                     </ListViewItem>
                 </ListView>
             </StackPanel>
-            
         </Grid>
         <Frame x:Name="page" Margin="155,0,10,-0.4"/>
-
     </Grid>
 </Page>

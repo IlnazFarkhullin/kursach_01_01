@@ -32,34 +32,15 @@ namespace kursach_01_01.BD_class
         }
 
         public string Surname { get; set; }
-
-        //[BsonElement("name")]
         public string Name { get; set; }
-
-        //[BsonElement("lname")]
         public string Lname { get; set; }
-
-        //[BsonElement("birth_date")]
-        public string Birth_date { get; set; }
-        //[BsonElement("phone")]
+        public string Birth_date  { get; set; }
         public string Phone { get; set; }
-
-        //[BsonElement("email")]
         public string email { get; set; }
-
-        //[BsonElement("medical_policy")]
         public string Medical_policy { get; set; }
-
-        //[BsonElement("inn")]
         public string INN { get; set; }
-
-        //[BsonElement("series")]
         public string Series { get; set; }
-
-        //[BsonElement("number")]
         public string Number { get; set; }
-
-        //[BsonElement("registration")]
         public string Registration { get; set; }
 
     }

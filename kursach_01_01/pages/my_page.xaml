@@ -30,11 +30,7 @@
             <TextBlock Margin="0,0,0,10" Text="Алмазович" FontSize="20" FontFamily="Georgia"/>
             <TextBlock Text="Должность:"/>
             <TextBlock Text="Староста"  FontSize="20" FontFamily="Georgia"/>
-
-
         </StackPanel>
         <Image Grid.Column="1" Grid.Row="1" Source="/ico/ii.png" Margin="0,0.4,0,0"/>
-
-
     </Grid>
 </Page>

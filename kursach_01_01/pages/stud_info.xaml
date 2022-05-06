@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:kursach_01_01.pages"
         mc:Ignorable="d"
         Icon="/ico/std.png"
-        Title="{Binding Surname}" Height="550" Width="800">
-    <Grid>
+        Title="{Binding Surname}" Height="550" Width="1000">
+    <Grid Background="Azure">
         <Grid.RowDefinitions>
             <RowDefinition Height="11*"/>
             <RowDefinition Height="94*"/>

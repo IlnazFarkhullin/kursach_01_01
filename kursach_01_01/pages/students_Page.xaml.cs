@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 using kursach_01_01.BD_class;
 namespace kursach_01_01.pages
 {
-    /// <summary>
-    /// Логика взаимодействия для students_page.xaml
-    /// </summary>
     public partial class students_page : Page
     {
         public students_page()
@@ -31,17 +28,12 @@ namespace kursach_01_01.pages
         public void Refresh()
         {
             std.ItemsSource = DataBaseMethods.ShowStudents();
-            
         }
         private void std_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var datastud = ((sender as ListView).SelectedItem as students_class);// передача данных на другую форму
             stud_info _Info = new stud_info(datastud);// передача данных на другую форму
-            _Info.Show();// открытие окна при нажатии на элемент ListView
-            
-
-           
-            
+            _Info.Show();// открытие окна при нажатии на элемент ListView   
         }
 
         private void serach_tb_TextChanged(object sender, TextChangedEventArgs e)
@@ -56,10 +48,6 @@ namespace kursach_01_01.pages
 
         private void delete_Click(object sender, RoutedEventArgs e) //Удаление студента
         {
-            //  var a = std.SelectedItem as students_class;
-            // DataBaseMethods.RemoveStudentToDatabase(a._id);
-            // MessageBox.Show("Запись удалена", "Регистрация студента", MessageBoxButton.OK, MessageBoxImage.Information);
-
             var z = std.SelectedItem as students_class;
             if (z != null)
             {
@@ -80,7 +68,5 @@ namespace kursach_01_01.pages
         {
             std.ItemsSource = DataBaseMethods.ShowStudents().ToList().OrderBy(z => z.Surname);//Сортировка по алфавиту от А до Я
         }
-
-        
     }
 }

@@ -21,7 +21,6 @@ namespace kursach_01_01.BD_class
             Text = text;
             Date = date;
         }
-
         public string Name_notes { get; set; }
         public string Text { get; set; }
         public DateTime Date{get;set;}
